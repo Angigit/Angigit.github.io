@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyelvtanuló kártyák</title>
+    <title>Nyelvek</title>
     <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
@@ -12,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html"></a>
@@ -56,43 +54,22 @@
             </form>
         </div>
     </nav>
-
+    
     <div class="container">
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-                <div class="card" style="width: 30rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">Good morning!</h3>
-                        <h5 class="card-subtitle mb-2 text-muted">Angol</h5>
-                        <h3 class="card-title2">Jó napot!</h3>
-                        <h5 class="card-subtitle2 mb-2 text-muted">Magyar</h5>
-                        <h6 class="card-subtitle3 mb-2 text-muted" id="tema">Témakör: Bemutatkozás</h6>
-                        
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p> -->
-                        <!-- <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <button id="elozoBtn" class="btn btn-light">
-                    Előző kártya
-                </button>
-                <button id="kovetkezoBtn" class="btn btn-light">
-                    Következő kártya
-                </button>
+                <ul class="list-group" id="nyelvekLista">
+                    <li class="list-group-item">Angol</li>
+                    <li class="list-group-item">Német</li>
+                    <li class="list-group-item">Francia</li>
+                    <li class="list-group-item">Magyar</li>
+                    <li class="list-group-item">Olasz</li>
+                    <li class="list-group-item">Portugál</li>
+                  </ul>
             </div>
             <div class="col-2"></div>
         </div>
     </div>
-
-    <script src="JS/main.js"></script>
 </body>
-
 </html>
