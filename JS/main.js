@@ -52,7 +52,6 @@ function getNextCard() {
 
 function fillCardBody(data, cardID) {
     let card = document.querySelector(`#${cardID}`);
-    let cardId = document.querySelector("#card-id");
     let cardTitle = document.querySelector("#cardTitle");
     let cardsubTitle = document.querySelector("#subtitle1");
     let cardTitle2 = document.querySelector("#cardTitle2");
@@ -69,7 +68,6 @@ function fillCardBody(data, cardID) {
         while (index < data.length) {
             //let keys = ["id", "megnev1", "nyelv1", "megnev2", "nyelv2", "tema"];      
             index++;
-            cardId.innerHTML = row[keys[0]];
             cardTitle.innerHTML = row[keys[1]];
             cardsubTitle.innerHTML = row[keys[2]];
             cardTitle2.innerHTML = row[keys[3]];
