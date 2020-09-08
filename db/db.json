@@ -1,0 +1,20 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "megnev1": "Good morning!",
+      "nyelv1": "Angol",
+      "megnev2": "Jó napot!",
+      "nyelv2": "Magyar",
+      "tema": "Bemutatkozás"
+    },
+    {
+      "id": 2,
+      "megnev1": "Good evening!",
+      "nyelv1": "Angol",
+      "megnev2": "Jó estét!",
+      "nyelv2": "Magyar",
+      "tema": "Bemutatkozás"
+    }
+  ]
+}

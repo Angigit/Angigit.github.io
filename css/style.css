@@ -1,0 +1,129 @@
+body {
+    /*background-color: rgb(220, 220, 220);*/
+    background-color: transparent;
+}
+
+.title1 {
+    margin-top: 50px;
+    margin-left: 15px;
+    text-align: justify;
+    word-spacing: 3px;
+}
+
+.title2 {
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: justify;
+    word-spacing: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: darkslategrey;
+}
+
+.index-title {
+    margin-top: 40px;
+    margin-left: 155px;
+}
+
+.index-img {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.card {
+    margin-top: 60px;
+    margin-left: 35px;
+    margin-right: 130px;
+    text-align: center;
+    border-style: solid;
+    border-color: darkslategrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.indexButtons {
+    margin-top: 15px;
+    margin-left: 35px;
+}
+
+.addButtons {
+    margin-bottom: 30px;
+}
+
+.testButtons1 {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.index-button {
+    margin-top: 15px;
+    margin-left: 155px;
+}
+
+.card-title {
+    margin-top: 10px;
+}
+
+.card-title2 {
+    margin-top: 1.5rem;
+}
+
+#theme {
+    margin-top: 1.5rem;
+}
+
+#cardsTable {
+    margin-top: 30px;
+}
+
+#listBtn {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#downloadBtn {
+    font-weight: bold;
+}
+
+.list-group {
+    margin-top: 40px;
+}
+
+#lang-list {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.test {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+h5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#test-nav {
+    margin-top: 40px;
+}
+
+#nav1, #nav2, #nav3 {
+    color: darkslategrey;
+}
+
+.test-legend {
+    border-bottom-style: solid;
+    border-bottom-color: darkslategrey;
+}
+
+.cardData {
+    border-bottom-style: solid;
+    border-bottom-color: darkslategrey;
+}
+
+.question {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
