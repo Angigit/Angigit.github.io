@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Témakörök</title>
-    <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"></a>
+        <a class="navbar-brand" href="./index.html"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent">
             <!--aria-expanded="false" aria-label="Toggle navigation"-->
@@ -22,14 +24,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Főoldal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nyelvek.html">Nyelvek </a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Főoldal <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="nyelvek.html">Nyelvek </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="temakorok.html">Témakörök </a>
+                    <a class="nav-link" href="./temakorok.html">Témakörök </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -37,39 +39,130 @@
                         Kártyák
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Hozzáadás</a>
+                        <a class="dropdown-item" href="./hozzaadas.html">Hozzáadás</a>
                         <a class="dropdown-item" href="#">Törlés</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="listak.html">Listák</a>
+                    <a class="nav-link" href="./listak.html">Listák</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tesztek</a>
+                    <a class="nav-link" href="./teszt1.html">Tesztek</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
             </form>
         </div>
     </nav>
-    
+
     <div class="container">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <ul class="list-group" id="temakLista">
-                    <li class="list-group-item">Bemutatkozás</li>
-                    <li class="list-group-item">Otthon</li>
-                    <li class="list-group-item">Munkahely</li>
-                    <li class="list-group-item">Iskola</li>
-                    <li class="list-group-item">Étterem</li>
-                    <li class="list-group-item">Utazás</li>
-                  </ul>
+            <div class="col-3">
+                <div class="title1">
+                    <h6>A témák kiválasztásához segítséget nyújthatnak ezek a kis leírások.</h6>
+                </div>
+                <div class="title2">
+                    <h6>A kártyák -> hozzáadás menüpontban az adatok megadásánál lehet kiválasztani a kívánt témakört.</h6>
+                </div>
             </div>
-            <div class="col-2"></div>
+            <div class="col-6">
+                <div class="list-group" id="theme-list">
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Bemutatkozás</h4>
+                            <small></small>
+                        </div>
+                        <p class="mb-1">Itt megadhatsz köszönést, személyleírást, és egyéb bemutatkozással kapcsolatos szavakat, kifejezéseket, pl. hogy hol laksz, hány éves vagy, hol dolgozol, vagy tanulsz és kik a barátaid.</p>                  
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Otthon</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Mindenféle otthoni dolgokat gyűjhetsz össze, a tárgyaktól a helységekig, a tévé nézéstől a főzésen át a takarításig mindent.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Munkahely</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">A munkahely a második hely, ahol a legtöbb időt töltjük, ezért fontos, hogy ebben a témakörben is bőven legyen tanulnivaló. Kollégák, főnökök, helyzetek, munkahelyi környezet, stb.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Iskola</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Itt a különböző tantárgyaktól a felszerelésig bármit megadhatsz, ami egy iskolában megtalálható, de megadhatsz helyzeteket, szituációkat is, amelyek egy suliban megtörténhetnek.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Étterem</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Enni mindenki szeret. :) Nem hinném, hogy nagyon be kell mutatni ezt a témakört. Minden, ami kajával kapcsolatos az jöhet ide.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Utazás</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Az utazás is sokak számára élmény. Minden, ami utazás, ebbe a témakörbe tartozik. A különböző országok, az utazási társaságok, a hotelek, panziók, és a különféle programok. Azonban nem csak nyaralni mehetünk, hanem üzleti útra is és ha eltévednénk, különösen hasznát vesszük majd a nyelvtudásunknak.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Orvosnál</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Csak orvoshoz ne kelljen menni! Viszont, ha már mindenképpen muszáj, akkor nem árt, ha tudunk néhány kifejezést, hogy legalább el tudjuk mondani mi bajunk. Ugyanígy az is fontos, hogy megértsük az orvos utasításait.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Vásárlás</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Nem csak a nők szeretnek vásárolni. Elég kimeríthetetlen ez a témakör, mert annyi mindent lehet vásárolni, szépségápolási cikkeket, élelmiszert, műszaki dolgokat és még sorolhatnám. Ami csak eszedbe jut a vásárlással kapcsolatban annak itt a helye.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Állatok</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Az állatok nagyon kedves teremtések, róluk is rengeteg dolgot el lehet mondani, a házi kedvencektől a vadállatokig. Az állatkerti állatokról se feledkezzünk el.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Színek</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">A színek a művészet világához tartoznak és nem csak a természetben, hanem mindenhol megtalálhatók, pl. színesek a virágok, festmények, ékszerek, bútorok, de van színe a napnak és az égboltnak is.</p>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">Számok</h4>
+                            <small class="text-muted"></small>
+                        </div>
+                        <p class="mb-1">Számolni mindenki tud. A számok világa csodálatos nagyon érdekes, gondoljunk csak a számmisztikára.</p>
+                    </a>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                      $("#myInput").on("keyup", function() {
+                        var value = $(this).val().toLowerCase();
+                        $("#theme-list a").filter(function() {
+                          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                      });
+                    });
+                </script>
+
+
+            </div>
+            <div class="col-3"></div>
         </div>
     </div>
 </body>
+
 </html>

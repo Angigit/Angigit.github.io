@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyelvek</title>
-    <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"></a>
+        <a class="navbar-brand" href="./index.html"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent">
             <!--aria-expanded="false" aria-label="Toggle navigation"-->
@@ -22,14 +24,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Főoldal <span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Főoldal <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./nyelvek.html">Nyelvek </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="nyelvek.html">Nyelvek </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="temakorok.html">Témakörök </a>
+                    <a class="nav-link" href="./temakorok.html">Témakörök </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -37,39 +39,49 @@
                         Kártyák
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Hozzáadás</a>
+                        <a class="dropdown-item" href="./hozzaadas.html">Hozzáadás</a>
                         <a class="dropdown-item" href="#">Törlés</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="listak.html">Listák</a>
+                    <a class="nav-link" href="./listak.html">Listák</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tesztek</a>
+                    <a class="nav-link" href="./teszt1.html">Tesztek</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
             </form>
         </div>
     </nav>
-    
+
     <div class="container">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <ul class="list-group" id="nyelvekLista">
+            <div class="col-3">
+                <div class="title1">
+                    <h6>Ezeken a nyelveken lehet gyakorolni a kártyákkal.</h6>
+                </div>
+                <div class="title2">
+                    <h6>A kártyák -> hozzáadás menüpontban az adatok megadásánál lehet kiválasztani a kívánt nyelvet.</h6>
+                </div>
+            </div>
+            <div class="col-6">
+                <ul class="list-group" id="lang-list">
                     <li class="list-group-item">Angol</li>
                     <li class="list-group-item">Német</li>
                     <li class="list-group-item">Francia</li>
                     <li class="list-group-item">Magyar</li>
                     <li class="list-group-item">Olasz</li>
+                    <li class="list-group-item">Spanyol</li>
                     <li class="list-group-item">Portugál</li>
-                  </ul>
+                    <li class="list-group-item">Orosz</li>
+                </ul>
             </div>
-            <div class="col-2"></div>
+            <div class="col-3"></div>
         </div>
     </div>
 </body>
+
 </html>

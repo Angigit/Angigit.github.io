@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listák</title>
-    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <title>Online teszt</title>
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./node_modules/popper.js/dist/popper.min.js"></script>
     <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html"></a>
@@ -43,7 +41,7 @@
                         <a class="dropdown-item" href="#">Törlés</a>
                     </div>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="./listak.html">Listák</a>
                 </li>
                 <li class="nav-item">
@@ -52,54 +50,76 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i
-                        class="fa fa-search"></i></i></button>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
             </form>
         </div>
     </nav>
-
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-3">
                 <div class="title1">
-                    <h6>Ezen az oldalon lehetőség van listázni az eddig megtanult szavakat, kifejezéseket.</h6>
+                    <h5>Az első teszt helyes megoldásai.</h5>         
                 </div>
-                <div class="title2">
-                    <h6>A listát pedig le is lehet tölteni pdf formátumban, amennyiben szükség van rá.</h6>
-                </div>                             
+                <div class="title2"></div>           
             </div>
-            <div class="col-4"></div>
-            <div class="col-2">
+            <div class="col-6">
+                <fieldset class="test">
+                    <legend class="test-legend"><h4>Teszt 1</h4></legend>
+                    <span></span>
+                    <hr>
+                    <div class="question1-1">
+                        <h5>1. This is <b><i>an airplane</i></b>.</h5>
+                    </div>
+                    <hr>
+                    <div class="question2-1">
+                        <h5>2. <b><i>Are you</i></b> from England?</h5>
+                    </div>
+                    <hr>
+                    <div class="question3-1">
+                        <h5>3. She is not <b><i>his girlfriend</i></b>.</h5>
+                    </div>
+                    <hr>
+                    <div class="question4-1">
+                        <h5>4. We <b><i>are</i></b> very happy.</h5>
+                    </div>
+                    <hr>
+                    <div class="question5-1">
+                        <h5>5. He <b><i>isn't</i></b> French.</h5>
+                    </div>
+                    <hr>
+                    <div class="question6-1">
+                        <h5>6. Your friends <b><i>are</i></b> very nice.</h5>
+                    </div>
+                    <hr>
+                    <div class="question7-1">
+                        <h5>7. <b><i>There are</i></b> two bananas on the table.</h5>
+                    </div>
+                    <hr>
+                    <div class="question8-1">
+                        <h5>8. I like eating <b><i>apples</i></b>.</h5>
+                    </div>
+                    <hr>
+                    <div class="question9-1">
+                        <h5>9. <b><i>Have they got</i></b> friends in Yorkshire?</h5>
+                    </div>
+                    <hr>
+                    <div class="question10-1">
+                        <h5>10. <b><i>There are</i></b> four rooms in our house.</h5>
+                    </div>
+                    <hr>
+                </fieldset>
+                
                 <div>
-                    <button id="listBtn" class="btn btn-block btn-light" onclick="getCards()">
-                        Kártya lista
+                    <button type="button" class="btn btn-light" id="backBtn">
+                        <a href="./index.html"><b>Vissza a főoldalra</b></a>
                     </button>
-                    <button id="downloadBtn" class="btn btn-block btn-light">
-                        Letöltés
+                    <button type="submit" class="btn btn-light">
+                        <a href="./teszt1.html"><b>Vissza a tesztre</b></a>
                     </button>
                 </div>
             </div>
+            <div class="col-3"></div>
         </div>
     </div>
-    <div class="container">
-        <div class="col">
-            <table id="cardsTable" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th style="width: 4rem;">#</th>
-                        <th>Megnevezés</th>
-                        <th style="width: 7rem;">Nyelv</th>
-                        <th>Megnevezés</th>
-                        <th style="width: 7rem;">Nyelv</th>
-                        <th style="width: 10rem;">Témakör</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
-
-    <script src="./JS/main.js"></script>
 </body>
-
 </html>

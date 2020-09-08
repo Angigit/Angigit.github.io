@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online teszt</title>
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent">
+            <!--aria-expanded="false" aria-label="Toggle navigation"-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Főoldal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nyelvek.html">Nyelvek </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./temakorok.html">Témakörök </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kártyák
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./hozzaadas.html">Hozzáadás</a>
+                        <a class="dropdown-item" href="#">Törlés</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./listak.html">Listák</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./teszt1.html">Tesztek</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="title1">
+                    <h5>Online ingyenes szintfelmérő tesztek</h5>         
+                </div>
+                <div class="title2">
+                    <h6>Ingyenes és gyorsan, egyszerűen felmérhetjük velük a tudásunkat.</h6>
+                </div>           
+            </div>
+            <div class="col-6">
+                <ul class="nav justify-content-center" id="test-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" id="nav1" href="./teszt1.html">Teszt 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="nav2" href="./teszt2.html">Teszt 2</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="nav3" href="./teszt3.html">Teszt 3</a>
+                    </li>
+                </ul>
+                <fieldset class="test">
+                    <legend class="test-legend"><h4>Teszt 2</h4></legend>
+                    <span></span>
+                    <hr>
+                    <div class="question1">
+                        <h5>1. There are ......... people in the room.</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a1" name="answer1" type="radio" value="300" class="form-group">
+                        <label for="a1">no any</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a2" name="answer1" type="radio" value="300" class="form-group">
+                        <label for="a2">a</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a3" name="answer1" type="radio" value="300" class="form-group">
+                        <label for="a3">some</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a4" name="answer1" type="radio" value="300" class="form-group">
+                        <label for="a4">any</label>
+                    </div>
+                    <hr>
+                    <div class="question2">
+                        <h5>2. They ......... three cars</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a5" name="answer2" type="radio" value="300" class="form-group">
+                        <label for="a5">are</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a6" name="answer2" type="radio" value="300" class="form-group">
+                        <label for="a6">haven't</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a7" name="answer2" type="radio" value="300" class="form-group">
+                        <label for="a7">have got</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a8" name="answer2" type="radio" value="300" class="form-group">
+                        <label for="a8">has got</label>
+                    </div>
+                    <hr>
+                    <div class="question3">
+                        <h5>3. ......... money in your wallet?</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a9" name="answer3" type="radio" value="300" class="form-group">
+                        <label for="a9">Is it any</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a10" name="answer3" type="radio" value="300" class="form-group">
+                        <label for="a10">There is some</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a11" name="answer3" type="radio" value="300" class="form-group">
+                        <label for="a11">Are there much</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a12" name="answer3" type="radio" value="300" class="form-group">
+                        <label for="a12">Is there any</label>
+                    </div>
+                    <hr>
+                    <div class="question4">
+                        <h5>4. ......... a hard job?</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a13" name="answer4" type="radio" value="300" class="form-group">
+                        <label for="a13">Has she</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a14" name="answer4" type="radio" value="300" class="form-group">
+                        <label for="a14">Have she got</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a15" name="answer4" type="radio" value="300" class="form-group">
+                        <label for="a15">Do you have</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a16" name="answer4" type="radio" value="300" class="form-group">
+                        <label for="a16">Have you</label>
+                    </div>
+                    <hr>
+                    <div class="question5">
+                        <h5>5. I ......... a bath.</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a17" name="answer5" type="radio" value="300" class="form-group">
+                        <label for="a17">am take</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a18" name="answer5" type="radio" value="300" class="form-group">
+                        <label for="a18">am taking</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a19" name="answer5" type="radio" value="300" class="form-group">
+                        <label for="a19">take</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a20" name="answer5" type="radio" value="300" class="form-group">
+                        <label for="a20">taking</label>
+                    </div>
+                    <hr>
+                    <div class="question6">
+                        <h5>6. My son ......... in the school now.</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a21" name="answer6" type="radio" value="300" class="form-group">
+                        <label for="a21">studying</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a22" name="answer6" type="radio" value="300" class="form-group">
+                        <label for="a22">studies</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a23" name="answer6" type="radio" value="300" class="form-group">
+                        <label for="a23">is studying</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a24" name="answer6" type="radio" value="300" class="form-group">
+                        <label for="a24">doesn't study</label>
+                    </div>
+                    <hr>
+                    <div class="question7">
+                        <h5>7. ......... to the meeting tomorrow?</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a25" name="answer7" type="radio" value="300" class="form-group">
+                        <label for="a25">Comes she</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a26" name="answer7" type="radio" value="300" class="form-group">
+                        <label for="a26">Do you come</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a27" name="answer7" type="radio" value="300" class="form-group">
+                        <label for="a27">Is she coming</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a28" name="answer7" type="radio" value="300" class="form-group">
+                        <label for="a28">She coming</label>
+                    </div>
+                    <hr>
+                    <div class="question8">
+                        <h5>8. ......... for this company?</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a29" name="answer8" type="radio" value="300" class="form-group">
+                        <label for="a29">Do your father work</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a30" name="answer8" type="radio" value="300" class="form-group">
+                        <label for="a30">Do they work</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a31" name="answer8" type="radio" value="300" class="form-group">
+                        <label for="a31">Works she</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a32" name="answer8" type="radio" value="300" class="form-group">
+                        <label for="a32">Work you</label>
+                    </div>
+                    <hr>
+                    <div class="question9">
+                        <h5>9. My son ......... get married this week.</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a33" name="answer9" type="radio" value="300" class="form-group">
+                        <label for="a33">going to</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a34" name="answer9" type="radio" value="300" class="form-group">
+                        <label for="a34">will getting</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a35" name="answer9" type="radio" value="300" class="form-group">
+                        <label for="a35">is going</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a36" name="answer9" type="radio" value="300" class="form-group">
+                        <label for="a36">'s going to</label>
+                    </div>
+                    <hr>
+                    <div class="question10">
+                        <h5>10. He ......... this question.</h5>
+                    </div>
+                    <div class="form-group">
+                        <input id="a37" name="answer10" type="radio" value="300" class="form-group">
+                        <label for="a37">won't answer</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a38" name="answer10" type="radio" value="300" class="form-group">
+                        <label for="a38">isn't answering</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a39" name="answer10" type="radio" value="300" class="form-group">
+                        <label for="a39">will not be answer</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="a40" name="answer10" type="radio" value="300" class="form-group">
+                        <label for="a40">doesn't answer</label>
+                    </div>
+                    <hr>
+                </fieldset>
+                
+                <div>
+                    <button type="button" class="btn btn-light" id="backBtn">
+                        <a href="./index.html"><b>Vissza a főoldalra</b></a>
+                    </button>
+                    <button type="submit" class="btn btn-light">
+                        <b>Küldés</b>
+                    </button>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</body>
+</html>
