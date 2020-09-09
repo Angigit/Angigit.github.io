@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyelvtanuló kártyák</title>
-    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./node_modules/popper.js/dist/popper.min.js"></script>
     <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent">
@@ -52,7 +52,8 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i
+                        class="fa fa-search"></i></i></button>
             </form>
         </div>
     </nav>
@@ -61,36 +62,38 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="title1">
-                    <h6>A nyelvtanuló kártyákkal gyorsan és könnyedén lehet tanulni különböző nyelveket, saját, egyéni tempóban haladva.</h6>                   
+                    <h6>A nyelvtanuló kártyákkal gyorsan és könnyedén lehet tanulni különböző nyelveket, saját, egyéni
+                        tempóban haladva.</h6>
                 </div>
                 <div class="title2">
-                    <h6>A kártyák segítségével könnyebbé és egyszerűbbé válik a nyelvtanulás, ugyanis a kártyák lapozgatásával, egyesével tudjuk memorizálni és begyakorolni a szavakat, kifejezéseket.</h6>
+                    <h6>A kártyák segítségével könnyebbé és egyszerűbbé válik a nyelvtanulás, ugyanis a kártyák
+                        lapozgatásával, egyesével tudjuk memorizálni és begyakorolni a szavakat, kifejezéseket.</h6>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="index-title">
                     <h3>Nyelvtanuló kártyák</h3>
                 </div>
-                <div class="card" style="width: 30rem;">
+                <div class="card">
                     <div id="cardBody" class="card-body">
                         <h4 id="cardTitle" class="card-title">Good morning!</h4>
                         <h6 id="subtitle1" class="card-subtitle mb-2 text-muted">Angol</h6>
                         <h4 id="cardTitle2" class="card-title2">Jó reggelt!</h4>
                         <h6 id="subtitle2" class="card-subtitle2 mb-2 text-muted">Magyar</h6>
-                        <h6 class="card-subtitle3 mb-2 text-muted" id="theme">Bemutatkozás</h6>
+                        <h6 id="theme" class="card-subtitle3 mb-2 text-muted">Bemutatkozás</h6>
                     </div>
                 </div>
-                <div class="indexButtons">
-                    <button type="button" class="btn btn-light" style="width: 237px;" onclick="getPreviousCard()">
-                    <b>Előző kártya</b>
+                <div>
+                    <button type="button" class="btn btn-light" id="previousButton" onclick="getPreviousCard()">
+                        <b>Előző kártya</b>
                     </button>
-                    <button type="button" class="btn btn-light" style="width: 237px;" onclick="getNextCard()">
-                    <b>Következő kártya</b>
+                    <button type="button" class="btn btn-light" id="nextButton" onclick="getNextCard()">
+                        <b>Következő kártya</b>
                     </button>
-                </div>        
+                </div>
             </div>
             <div class="col-sm-3">
-                <img class="index-img" src="./lib/images/kartya2.jpg" alt="card" width="200" height="200">
+                <img class="index-img" src="./lib/images/kartya2.jpg" alt="card">
             </div>
         </div>
     </div>

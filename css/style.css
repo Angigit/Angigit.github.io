@@ -6,61 +6,28 @@ body {
     background-color: transparent;
 }
 
-/*index.html*/
 .title1 {
     margin-top: 50px;
-    margin-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: justify;
     word-spacing: 3px;
 }
 
 .title2 {
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: justify;
     word-spacing: 3px;
     border-bottom-style: solid;
     border-bottom-color: darkslategrey;
 }
 
-.index-title {
-    margin-top: 40px;
-    margin-left: 155px;
-}
-
-.index-img {
-    margin-top: 50px;
-    margin-left: 50px;
-    width: 100%;
-    height: auto;
-}
-
-.card {
-    margin-top: 60px;
-    margin-left: 35px;
-    margin-right: 130px;
-    text-align: center;
-    border-style: solid;
-    border-color: darkslategrey;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-}
-
-.indexButtons {
-    margin-top: 15px;
-    margin-left: 35px;
-}
-
-.card-title {
-    margin-top: 10px;
-}
-
-.card-title2 {
-    margin-top: 1.5rem;
-}
-
-#theme {
-    margin-top: 1.5rem;
+/*eredmeny-teszt1.html*/
+h5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /*hozzaadas.html*/
@@ -73,8 +40,62 @@ body {
     margin-bottom: 30px;
 }
 
+/*index.html*/
+.index-title {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
+.index-img {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+}
 
+.card {
+    width: 90%;
+    height: auto;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-style: solid;
+    border-color: darkslategrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#previousButton {
+    margin-top: 15px;
+    margin-left: 5%;
+    width: 42.5%;
+    height: auto;
+}
+
+#nextButton {
+    margin-top: 15px;
+    margin-left: 2%;
+    width: 42.5%;
+    height: auto;
+    position: absolute;
+}
+
+.card-title {
+    margin-top: 10px;
+}
+
+.card-title2 {
+    margin-top: 6%;
+}
+
+#theme {
+    margin-top: 6%;
+}
+
+/*listak.html*/
 #cardsTable {
     margin-top: 30px;
 }
@@ -92,20 +113,22 @@ body {
     margin-top: 40px;
 }
 
+/*nyelvek.html*/
 #lang-list {
     text-align: center;
     margin-left: 80px;
     margin-right: 80px;
 }
 
+/*teszt1-teszt2-teszt3.html*/
 .test {
     margin-top: 40px;
     margin-left: 30px;
 }
 
-h5 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+.test-legend {
+    border-bottom-style: solid;
+    border-bottom-color: darkslategrey;
 }
 
 #test-nav {
@@ -115,16 +138,6 @@ h5 {
 #nav1, #nav2, #nav3 {
     color: darkslategrey;
 }
-
-.test-legend {
-    border-bottom-style: solid;
-    border-bottom-color: darkslategrey;
-}
-
-/* .cardData {
-    border-bottom-style: solid;
-    border-bottom-color: darkslategrey;
-} */
 
 .question {
     margin-top: 30px;

@@ -77,27 +77,18 @@ function fillCardBody(data, cardID) {
     }
 }
 
-
-
-/*A listak.html-ben megadtam a gombnak egy id-t, majd itt megírom hozzá az eseménykezelőt, hogy a getServerData függvény egy gomb megnyomására fusson le és kérje le az adatokat a szerverről.*/
-//document.querySelector("#listBtn").addEventListener("click", startGetCards);
-
 /*Feltöltjük a táblázatot a szerveradatokkal. A függvény univerzális, tehát más táblázatokhoz is használható.*/
 //Fill table with server data
 function fillDataTable(data, tableID) {
     let table = document.querySelector(`#${tableID}`);  /*kiválasztjuk a táblázatot a table id alapján --> behelyettesítettük a selektor stringbe a kapott tableID-t*/
     if (!table) {
-        console.error(`Table "${tableID}" is not found.`); //hibaüzenet, ha nincs tábla
+        console.error(`Table "${tableID}" is not found.`); 
         return;
     }
 
     //Add new user row to the table
     let tBody = table.querySelector("tbody"); //ebbe fogjuk az adatokat beletölteni.
-    tBody.innerHTML = ''; //kiürítjük a tbody-t, hogy mindig frissen legyenek benne az adatok
-    //let newRow = newUserRow(); //létrehozunk egy új sort
-    //tBody.appendChild(newRow); //hozzáadjuk a tbody-hoz az új sort appendChild-al
-    //for ciklussal fixen kirajzoljuk a táblázat sorait.  
-    //A createAnyElement függvény után létrehozzuk a tr és td elemeket és hozzáadjuk őket az appendChild-al.
+    tBody.innerHTML = ''; 
     for (let row of data) { //az adatsorokat egyesével kiolvassuk a data tömbből
 
         let tr = createAnyElement("tr");
@@ -115,14 +106,9 @@ function fillDataTable(data, tableID) {
             td.appendChild(input);
             tr.appendChild(td);
         }
-
-        /*A createBtnGroup függvényt elmentjük egy változóba és hozzáadjuk a sorokhoz (tr) a btnGroup-ot és a td-t appendChild-al.*/
-        /* let btnGroup = createBtnGroup();
-        tr.appendChild(btnGroup);*/
         tBody.appendChild(tr);
     }
 }
-
 
 //Létrehozunk egy függvényt, amivel bármilyen html elemet le tudunk gyártani.
 function createAnyElement(name, attributes) {
@@ -133,35 +119,8 @@ function createAnyElement(name, attributes) {
     return element;
 }
 
-
-/* //Create new user row
-function newUserRow(row) {
-    let tr = createAnyElement("tr");
-    for (let k of keys) {
-        let td = createAnyElement("td");
-        let input = createAnyElement("input", {
-            class: "form-control",
-            name: k
-        });
-        td.appendChild(input);
-        tr.appendChild(td);
-    }
-
-    let newBtn = createAnyElement("button", {
-        class: "btn btn-success",
-        onclick: "createUser(this)"
-    });
-
-    newBtn.innerHTML = '<i class="fa fa-plus-circle" aria-hidden="true"></i>';
-    let td = createAnyElement("td");
-    td.appendChild(newBtn);
-    tr.appendChild(td);
-    return tr;
-} */
-
 //Create new user - Össze kell szedni az adatokat az input-okból
 function createUser() {
-    //let tr = btn.parentElement.parentElement.parentElement;  //ki kell választani a gomb szülői közül a tr-t. Mivel nincs gomb csoportban, ezért csak két szülője van.
     let data = getFormData();
     delete data.id;  //hogy ne adjon hozzá új id-t, mert a json szerver figyeli és automatikusan létrehozza az új id-t.
 
@@ -178,11 +137,10 @@ function createUser() {
 
     //elindítjuk a fetch-et a szerver felé
     fetch(`http://localhost:3000/cards`, fetchOptions).then(
-        resp => resp.json(),  //kapunk egy választ, ez json lesz
-        err => console.error(err)  //a hibát lekezeljük - ha hiba van írja ki a konzolra
-    ).then(  //mivel visszatér a json-el, arra is meghívjuk a then-t
-        //data =>  //így megmaradnak az adatok a képernyőn
-        data => console.log(data)  //az adat ami jött a szerverről kilogoljuk, hogy lássuk mit küldött vissza a szerver 
+        resp => resp.json(),  //kapunk egy json választ
+        err => console.error(err)  
+    ).then(  
+        data => console.log(data) 
     );
 
     console.log(data);
@@ -222,26 +180,4 @@ function getFormData() {
     return data;
 }
 
-/* //Set data
-function setRow(btn) {
-    let tr = btn.parentElement.parentElement.parentElement;
-    let data = getFormData(tr);
-
-    let fetchOptions = {
-        method: "PUT",
-        mode: "cors",
-        cache: "no-cache",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    };
-
-    fetch(`http://localhost:3000/cards/${data.id}`, fetchOptions).then(
-        resp => resp.json(), //parse-oljuk a kapott adatokat
-        err => console.error(err) //a hibát kezeljük
-    ).then(
-        data => startGetCards() //ha sikerült a parse-olás, akkor újra lekérjük az adatokat az adatbázisból a startGetCards-el.
-    );
-} */
 
