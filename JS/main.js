@@ -82,13 +82,13 @@ function fillCardBody(data, cardID) {
 function fillDataTable(data, tableID) {
     let table = document.querySelector(`#${tableID}`);  /*kiválasztjuk a táblázatot a table id alapján --> behelyettesítettük a selektor stringbe a kapott tableID-t*/
     if (!table) {
-        console.error(`Table "${tableID}" is not found.`); 
+        console.error(`Table "${tableID}" is not found.`);
         return;
     }
 
     //Add new user row to the table
     let tBody = table.querySelector("tbody"); //ebbe fogjuk az adatokat beletölteni.
-    tBody.innerHTML = ''; 
+    tBody.innerHTML = '';
     for (let row of data) { //az adatsorokat egyesével kiolvassuk a data tömbből
 
         let tr = createAnyElement("tr");
@@ -138,45 +138,28 @@ function createUser() {
     //elindítjuk a fetch-et a szerver felé
     fetch(`http://localhost:3000/cards`, fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
-        err => console.error(err)  
-    ).then(  
-        data => console.log(data) 
+        err => console.error(err)
+    ).then(
+        data => data
     );
-
     console.log(data);
 }
 
 function getFormData() {
-    //let inputs = tr.querySelectorAll("input.form-control");  //meg kell keresni benne az összes input-ot
-    /* for (let i = 0; i < inputs.length; i++) {  //ki kell belőlük olvasni az adatokat
-        data[inputs[i].name] = inputs[i].value;  //az input nevével ellátva kell belőlük készíteni kulcs-érték párokkal egy objektumot
-    } */
-
-    let inputs = document.getElementsByClassName("form-control");
+    let form = document.querySelector("#cardForm");
+    let inputs = form.querySelectorAll("input.form-control"); //meg kell keresni benne az összes input-ot
+    let selects = form.querySelectorAll("select.form-control"); //és az összes select-et
     let data = {};
-    let i;
-    for (i = 0; i < inputs.length; i++) {
-        data[inputs[i].name] = inputs[i].value;
+    let i, j;
+
+    //ki kell belőlük olvasni az adatokat
+    for (i = 0; i < inputs.length; i++) {       
+        for (j = 0; j < selects.length; j++) {   
+            //és az input nevével ellátva kell belőlük készíteni kulcs-érték párokkal egy objektumot
+            data[inputs[i].name] = inputs[i].value;
+            data[selects[j].name] = selects[j].value;
+        }
     }
-
-    /* let name1 = document.getElementById("name1").name;
-    data[name1.megnev1] = name1.value;
-    
-    let selectNyelv1 = document.getElementById("selectNyelv1");
-    selectNyelv1.options[selectNyelv1.selectedIndex].text;
-    data[selectNyelv1.nyelv1] = selectNyelv1.value;
-
-    let name2 = document.getElementById("name2").name;
-    data[name2.megnev2] = name2.value;
-
-    let selectNyelv2 = document.getElementById("selectNyelv2");
-    selectNyelv2.options[selectNyelv2.selectedIndex].text;
-    data[selectNyelv2.nyelv2] = selectNyelv2.value;
-
-    let selectTema = document.getElementById("selectTema");
-    selectTema.options[selectTema.selectedIndex].text;
-    data[selectTema.tema] = selectTema.value; */
-
     return data;
 }
 

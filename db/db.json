@@ -15,6 +15,22 @@
       "megnev2": "Jó éjszakát!",
       "nyelv2": "Magyar",
       "tema": "Bemutatkozás"
+    },
+    {
+      "megnev1": "Hello!",
+      "nyelv1": "Angol",
+      "nyelv2": "Magyar",
+      "tema": "Bemutatkozás",
+      "megnev2": "Szia!",
+      "id": 3
+    },
+    {
+      "megnev1": "kitchen",
+      "nyelv1": "Angol",
+      "nyelv2": "Magyar",
+      "tema": "Otthon",
+      "megnev2": "konyha",
+      "id": 4
     }
   ]
 }

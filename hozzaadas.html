@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kártya hozzáadása</title>
-    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./node_modules/popper.js/dist/popper.min.js"></script>
     <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
@@ -52,7 +52,8 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i
+                        class="fa fa-search"></i></i></button>
             </form>
         </div>
     </nav>
@@ -60,7 +61,8 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="title1">
-                    <h6>Ezen az oldalon új szavakat, vagy kifejezéseket lehet felvenni, amelyek majd megjelennek a kártyákon.</h6>
+                    <h6>Ezen az oldalon új szavakat, vagy kifejezéseket lehet felvenni, amelyek majd megjelennek a
+                        kártyákon.</h6>
                 </div>
                 <div class="title2">
                     <h6>Az adatok kitöltése után a mentés gombra kattintva rögzíti azokat a rendszer.</h6>
@@ -68,17 +70,19 @@
             </div>
             <div class="col-sm-6">
                 <hr>
-                <fieldset class="form-horizontal">
-                    <legend class="cardData">
+                <fieldset>
+                    <legend>
                         <h3>Kártya adatok</h3>
                     </legend>
+                </fieldset>
+                <form id="cardForm" action="" class="form-horizontal">
                     <div class="form-group">
-                        <label for="name">Megnevezés:</label>
-                        <input id="name1" name="name" type="text" class="form-control" required>
+                        <label for="">Megnevezés:</label>
+                        <input id="name1" name="megnev1" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="name">Nyelv:</label>
-                        <select multiple class="form-control" id="selectNyelv1">
+                        <label for="">Nyelv:</label>
+                        <select id="selectNyelv1" name="nyelv1" multiple class="form-control">
                             <option value="Angol">Angol</option>
                             <option value="Német">Német</option>
                             <option value="Francia">Francia</option>
@@ -90,12 +94,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="name">Megnevezés:</label>
-                        <input id="name2" name="name" type="text" class="form-control" required>
+                        <label for="">Megnevezés:</label>
+                        <input id="name2" name="megnev2" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="name">Nyelv:</label>
-                        <select multiple class="form-control" id="selectNyelv2">
+                        <label for="">Nyelv:</label>
+                        <select id="selectNyelv2" name="nyelv2" multiple class="form-control">
                             <option value="Angol">Angol</option>
                             <option value="Német">Német</option>
                             <option value="Francia">Francia</option>
@@ -107,8 +111,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="name">Témakör:</label>
-                        <select multiple class="form-control" id="selectTema">
+                        <label for="">Témakör:</label>
+                        <select id="selectTema" name="tema" multiple class="form-control">
                             <option value="Bemutatkozás">Bemutatkozás</option>
                             <option value="Otthon">Otthon</option>
                             <option value="Munkahely">Munkahely</option>
@@ -122,16 +126,16 @@
                             <option value="Számok">Számok</option>
                         </select>
                     </div>
-                </fieldset>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-light" id="backBtn">
+                            <a href="./index.html"><b>Vissza a főoldalra</b></a>
+                        </button>
+                        <button type="button" class="btn btn-light" id="mentesBtn" onclick="createUser()">
+                            <b>Mentés</b>
+                        </button>
+                    </div>
+                </form>
                 <hr>
-                <div class="addButtons">
-                    <button type="button" class="btn btn-light">
-                        <a class="backBtn" href="./index.html"><b>Vissza a főoldalra</b></a>
-                    </button>
-                    <button type="button" id="mentesBtn" class="btn btn-light" onclick="createUser()">
-                        <b>Mentés</b>
-                    </button>
-                </div>
             </div>
             <div class="col-sm-3"></div>
         </div>
