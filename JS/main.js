@@ -16,14 +16,13 @@ function getServerData(url) {
 }
 
 function getPreviousCard() {
-    getServerData2("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
     //getServerData("http://localhost:3000/cards").then(
         data => {
             previousCardBody(data, "cardBody")
         }
     );
 }
-
 
 let cardTitle = document.querySelector("#cardTitle");
 let cardsubTitle = document.querySelector("#subtitle1");
@@ -50,7 +49,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    getServerData2("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
     //getServerData("http://localhost:3000/cards").then(
         data => {
             nextCardBody(data, "cardBody")
