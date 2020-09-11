@@ -16,7 +16,7 @@ function getServerData(url) {
 
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    getServerData("http://localhost:3000/cards").then(
+    getServerData("https://my-json-server.typicode.com/user/repo/cards").then(
         //data => console.log(data)
         data => fillDataTable(data, "cardsTable")
     );
