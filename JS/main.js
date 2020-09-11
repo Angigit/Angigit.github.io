@@ -1,5 +1,6 @@
 //Keys of cards
 let keys = ["id", "megnev1", "nyelv1", "megnev2", "nyelv2", "tema"];
+let index = 0;
 
 //Get data from the server.
 function getServerData(url) {
@@ -14,67 +15,75 @@ function getServerData(url) {
     );
 }
 
-//kiszervezzük egy külön függvénybe a getServerData-t
-function getCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
-        //data => console.log(data)
-        data => fillDataTable(data, "cardsTable")
-    );
-}
-
-function getServerData2(url) {
-    let fetchOptions = {
-        method: "GET",
-        mode: "cors",
-        cache: "no-cache"
-    };
-    return fetch(url, fetchOptions).then(
-        response => response.json(),
-        err => console.error(err)
-    );
-}
-
 function getPreviousCard() {
     getServerData2("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    //getServerData("http://localhost:3000/cards").then(
         data => {
-            fillCardBody(data, "cardBody")
+            previousCardBody(data, "cardBody")
         }
     );
+}
+
+
+let cardTitle = document.querySelector("#cardTitle");
+let cardsubTitle = document.querySelector("#subtitle1");
+let cardTitle2 = document.querySelector("#cardTitle2");
+let cardsubTitle2 = document.querySelector("#subtitle2");
+let theme = document.querySelector("#theme");
+
+function previousCardBody(data, cardID) {
+    let card = document.querySelector(`#${cardID}`);
+    if (!card) {
+        console.error(`Card "${cardID}" is not found.`);
+        return;
+    }
+    //let keys = ["id", "megnev1", "nyelv1", "megnev2", "nyelv2", "tema"];
+    if (index > 0) {
+        index--;
+        cardTitle.innerHTML = data[index][keys[1]];
+        cardsubTitle.innerHTML = data[index][keys[2]];
+        cardTitle2.innerHTML = data[index][keys[3]];
+        cardsubTitle2.innerHTML = data[index][keys[4]];
+        theme.innerHTML = data[index][keys[5]];
+    }
+    console.log(data[index][keys[1]]);
 }
 
 function getNextCard() {
     getServerData2("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    //getServerData("http://localhost:3000/cards").then(
         data => {
-            fillCardBody(data, "cardBody")
+            nextCardBody(data, "cardBody")
         }
     );
 }
 
-function fillCardBody(data, cardID) {
+function nextCardBody(data, cardID) {
     let card = document.querySelector(`#${cardID}`);
-    let cardTitle = document.querySelector("#cardTitle");
-    let cardsubTitle = document.querySelector("#subtitle1");
-    let cardTitle2 = document.querySelector("#cardTitle2");
-    let cardsubTitle2 = document.querySelector("#subtitle2");
-    let theme = document.querySelector("#theme");
-
     if (!card) {
         console.error(`Card "${cardID}" is not found.`);
         return;
     }
 
-    let index = 0;
-    for (let row of data) {
-        while (index < data.length) {
-            //let keys = ["id", "megnev1", "nyelv1", "megnev2", "nyelv2", "tema"];      
-            index++;
-            cardTitle.innerHTML = row[keys[1]];
-            cardsubTitle.innerHTML = row[keys[2]];
-            cardTitle2.innerHTML = row[keys[3]];
-            cardsubTitle2.innerHTML = row[keys[4]];
-            theme.innerHTML = row[keys[5]];
-        }
+    //let keys = ["id", "megnev1", "nyelv1", "megnev2", "nyelv2", "tema"];
+    if (index < data.length) {
+        index++;
+        cardTitle.innerHTML = data[index][keys[1]];
+        cardsubTitle.innerHTML = data[index][keys[2]];
+        cardTitle2.innerHTML = data[index][keys[3]];
+        cardsubTitle2.innerHTML = data[index][keys[4]];
+        theme.innerHTML = data[index][keys[5]];
     }
+    console.log(data[index][keys[1]]);
+}
+
+//kiszervezzük egy külön függvénybe a getServerData-t
+function getCards() {
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    //getServerData("http://localhost:3000/cards").then(
+        //data => console.log(data)
+        data => fillDataTable(data, "cardsTable")
+    );
 }
 
 /*Feltöltjük a táblázatot a szerveradatokkal. A függvény univerzális, tehát más táblázatokhoz is használható.*/
@@ -137,6 +146,7 @@ function createUser() {
 
     //elindítjuk a fetch-et a szerver felé
     fetch(`https://my-json-server.typicode.com/angigit/angigit.github.io/cards`, fetchOptions).then(
+    //fetch(`http://localhost:3000/cards`, fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
@@ -153,8 +163,8 @@ function getFormData() {
     let i, j;
 
     //ki kell belőlük olvasni az adatokat
-    for (i = 0; i < inputs.length; i++) {       
-        for (j = 0; j < selects.length; j++) {   
+    for (i = 0; i < inputs.length; i++) {
+        for (j = 0; j < selects.length; j++) {
             //és az input nevével ellátva kell belőlük készíteni kulcs-érték párokkal egy objektumot
             data[inputs[i].name] = inputs[i].value;
             data[selects[j].name] = selects[j].value;

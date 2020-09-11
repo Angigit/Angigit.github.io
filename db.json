@@ -31,6 +31,14 @@
       "tema": "Otthon",
       "megnev2": "konyha",
       "id": 4
+    },
+    {
+      "megnev1": "Bom dia!",
+      "nyelv1": "Portugál",
+      "nyelv2": "Magyar",
+      "tema": "Bemutatkozás",
+      "megnev2": "Jó napot!",
+      "id": 5
     }
   ]
 }
