@@ -35,7 +35,7 @@ function getServerData2(url) {
 }
 
 function getPreviousCard() {
-    getServerData2("http://localhost:3000/cards").then(
+    getServerData2("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             fillCardBody(data, "cardBody")
         }
@@ -43,7 +43,7 @@ function getPreviousCard() {
 }
 
 function getNextCard() {
-    getServerData2("http://localhost:3000/cards").then(
+    getServerData2("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             fillCardBody(data, "cardBody")
         }
@@ -136,7 +136,7 @@ function createUser() {
     };
 
     //elindítjuk a fetch-et a szerver felé
-    fetch(`http://localhost:3000/cards`, fetchOptions).then(
+    fetch(`https://my-json-server.typicode.com/angigit/angigit.github.io/cards`, fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
