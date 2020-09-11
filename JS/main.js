@@ -16,7 +16,7 @@ function getServerData(url) {
 
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
         //data => console.log(data)
         data => fillDataTable(data, "cardsTable")
     );
