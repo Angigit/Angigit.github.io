@@ -16,8 +16,8 @@ function getServerData(url) {
 }
 
 function getPreviousCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
     //getServerData("http://localhost:3000/cards").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             previousCardBody(data, "cardBody")
         }
@@ -49,8 +49,8 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
     //getServerData("http://localhost:3000/cards").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             nextCardBody(data, "cardBody")
         }
@@ -78,9 +78,8 @@ function nextCardBody(data, cardID) {
 
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
     //getServerData("http://localhost:3000/cards").then(
-        //data => console.log(data)
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(      
         data => fillDataTable(data, "cardsTable")
     );
 }
@@ -144,8 +143,8 @@ function createUser() {
     };
 
     //elindítjuk a fetch-et a szerver felé
-    fetch(`https://my-json-server.typicode.com/angigit/angigit.github.io/cards`, fetchOptions).then(
     //fetch(`http://localhost:3000/cards`, fetchOptions).then(
+    fetch(`https://my-json-server.typicode.com/angigit/angigit.github.io/cards`, fetchOptions).then(    
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
