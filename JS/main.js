@@ -1,5 +1,5 @@
 //Keys of cards
-let keys = ["id", "megnev1", "nyelv1", "megnev2", "nyelv2", "tema"];
+let keys = ["id", "Megnevezés1", "Nyelv1", "Megnevezés2", "Nyelv2", "Témakör"];
 let index = 0;
 
 //Get data from the server.
@@ -16,8 +16,7 @@ function getServerData(url) {
 }
 
 function getPreviousCard() {
-    //getServerData("http://localhost:3000/cards").then(
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    getServerData("http://localhost:3000/cards").then(
         data => {
             previousCardBody(data, "cardBody")
         }
@@ -49,8 +48,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    //getServerData("http://localhost:3000/cards").then(
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    getServerData("http://localhost:3000/cards").then(
         data => {
             nextCardBody(data, "cardBody")
         }
@@ -76,10 +74,69 @@ function nextCardBody(data, cardID) {
     console.log(data[index][keys[1]]);
 }
 
+//Export data into PDF with jQuery
+/* $('#downloadBtn').click(() => {
+    var pdf = new jsPDF();
+    pdf.addHTML(document.querySelector("#cardsTable"),function() {
+        pdf.save('lista.pdf');
+    });
+}) */
+
+function getDataToPDF() {
+    getServerData("http://localhost:3000/cards").then(
+        data => {
+            exportToPDF(data, "cardsTable")
+        }
+    );
+}
+
+//Export data into PDF
+function exportToPDF(data, tableID) {
+    let table = document.querySelector(`#${tableID}`);
+    if (!table) {
+        console.error(`Table "${tableID}" is not found.`);
+        return;
+    }
+
+    const pdfDocGenerator = pdfMake.createPdf(dd);
+    var dd = {
+        content: [],
+        styles: {
+            f18: {
+                fontSize: 18
+            },
+            strong: {
+                bold: true
+            }
+        },
+    }
+
+    dd.content.push({ text: 'Lista', style: ['f18', 'strong'] });
+    for (let row of data) {
+        dd.content.push({ columns: [{ text: row }] });
+        dd.content.push(' ');
+        for (let k of keys) {
+            dd.content.push({ columns: [{ text: k, bold: true }, { text: row[k] }] });
+            dd.content.push(' ');
+        }
+    }
+
+    pdfMake.createPdf(dd).open();
+    //pdfMake.createPdf(docDefinition).download();
+}
+
+/* $(document).ready(function () {
+    $('#cardsTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+}); */
+
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    //getServerData("http://localhost:3000/cards").then(
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(      
+    getServerData("http://localhost:3000/cards").then(
         data => fillDataTable(data, "cardsTable")
     );
 }
@@ -97,24 +154,26 @@ function fillDataTable(data, tableID) {
     let tBody = table.querySelector("tbody"); //ebbe fogjuk az adatokat beletölteni.
     tBody.innerHTML = '';
     for (let row of data) { //az adatsorokat egyesével kiolvassuk a data tömbből
-
         let tr = createAnyElement("tr");
         for (let k of keys) {
             let td = createAnyElement("td");
-
-            let input = createAnyElement("input", {
-                class: "form-control",
-                value: row[k],
-                name: k
-            });
-            if (k == "id") {
-                input.setAttribute("readonly", true);
-            }
-            td.appendChild(input);
+            td.innerHTML = row[k];
             tr.appendChild(td);
         }
         tBody.appendChild(tr);
     }
+
+    /* $('#cardsTable').dataTable({
+        data: data,
+        columns: [
+            { data: 'id' },
+            { data: 'megnev1' },
+            { data: 'nyelv1' },
+            { data: 'megnev2' },
+            { data: 'nyelv2' },
+            { data: 'tema' }
+        ]
+    }); */
 }
 
 //Létrehozunk egy függvényt, amivel bármilyen html elemet le tudunk gyártani.
@@ -124,6 +183,46 @@ function createAnyElement(name, attributes) {
         element.setAttribute(k, attributes[k]);
     }
     return element;
+}
+
+function getFilteredCards() {
+    getServerData("http://localhost:3000/cards").then(
+        data => filterTable(data, "cardsTable")
+    );
+}
+
+//Filter table
+function filterTable(data, tableID) {
+    let table = document.querySelector(`#${tableID}`);
+    if (!table) {
+        console.error(`Table "${tableID}" is not found.`);
+        return;
+    }
+
+    let filter, txtValue;
+    let searchInput = document.getElementById("listInput");
+    filter = searchInput.value.toUpperCase();
+    let tBody = table.querySelector("tbody"); //ebbe fogjuk az adatokat beletölteni.
+    tBody.innerHTML = '';
+
+    for (let row of data) { //az adatsorokat egyesével kiolvassuk a data tömbből
+        let tr = createAnyElement("tr");
+        for (let k of keys) {
+            let td = createAnyElement("td");
+            td.innerHTML = row[k];
+            if (td) {
+                txtValue = td.textContext || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+                    tr.appendChild(td);
+                } else {
+                    console.log("Nincs találat!");
+                }
+                //tr.appendChild(td);
+            }
+            tBody.appendChild(tr);
+        }
+    }
 }
 
 //Create new user - Össze kell szedni az adatokat az input-okból
@@ -143,14 +242,13 @@ function createUser() {
     };
 
     //elindítjuk a fetch-et a szerver felé
-    //fetch(`http://localhost:3000/cards`, fetchOptions).then(
-    fetch(`https://my-json-server.typicode.com/angigit/angigit.github.io/cards`, fetchOptions).then(    
+    fetch(`http://localhost:3000/cards`, fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
-        data => data
+        data => console.log(data)
     );
-    console.log(data);
+    //console.log(data);
 }
 
 function getFormData() {

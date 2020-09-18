@@ -2,43 +2,59 @@
   "cards": [
     {
       "id": 1,
-      "megnev1": "Good evening!",
-      "nyelv1": "Angol",
-      "megnev2": "Jó estét!",
-      "nyelv2": "Magyar",
-      "tema": "Bemutatkozás"
+      "Megnevezés1": "Good evening!",
+      "Nyelv1": "Angol",
+      "Megnevezés2": "Jó estét!",
+      "Nyelv2": "Magyar",
+      "Témakör": "Bemutatkozás"
     },
     {
       "id": 2,
-      "megnev1": "Good night!",
-      "nyelv1": "Angol",
-      "megnev2": "Jó éjszakát!",
-      "nyelv2": "Magyar",
-      "tema": "Bemutatkozás"
+      "Megnevezés1": "Good night!",
+      "Nyelv1": "Angol",
+      "Megnevezés2": "Jó éjszakát!",
+      "Nyelv2": "Magyar",
+      "Témakör": "Bemutatkozás"
     },
     {
-      "megnev1": "Hello!",
-      "nyelv1": "Angol",
-      "nyelv2": "Magyar",
-      "tema": "Bemutatkozás",
-      "megnev2": "Szia!",
+      "Megnevezés1": "Hello!",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Bemutatkozás",
+      "Megnevezés2": "Szia!",
       "id": 3
     },
     {
-      "megnev1": "kitchen",
-      "nyelv1": "Angol",
-      "nyelv2": "Magyar",
-      "tema": "Otthon",
-      "megnev2": "konyha",
+      "Megnevezés1": "kitchen",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Otthon",
+      "Megnevezés2": "konyha",
       "id": 4
     },
     {
-      "megnev1": "Bom dia!",
-      "nyelv1": "Portugál",
-      "nyelv2": "Magyar",
-      "tema": "Bemutatkozás",
-      "megnev2": "Jó napot!",
+      "Megnevezés1": "Bom dia!",
+      "Nyelv1": "Portugál",
+      "Nyelv2": "Magyar",
+      "Témakör": "Bemutatkozás",
+      "Megnevezés2": "Jó napot!",
       "id": 5
+    },
+    {
+      "Megnevezés1": "Guten tag!",
+      "Nyelv1": "Német",
+      "Nyelv2": "Magyar",
+      "Témakör": "Bemutatkozás",
+      "Megnevezés2": "Jó napot!",
+      "id": 6
+    },
+    {
+      "Megnevezés1": "Olá!",
+      "Nyelv1": "Portugál",
+      "Nyelv2": "Magyar",
+      "Témakör": "Bemutatkozás",
+      "Megnevezés2": "Szia!",
+      "id": 7
     }
   ]
 }

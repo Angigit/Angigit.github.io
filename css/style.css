@@ -18,6 +18,7 @@ body {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     text-align: justify;
     word-spacing: 3px;
     border-bottom-style: solid;
@@ -59,7 +60,8 @@ h5 {
     margin-right: auto;
     text-align: center;
     border-style: solid;
-    border-color: darkslategrey;
+    /* border-color: darkslategrey; */
+    border-color: maroon;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -68,6 +70,7 @@ h5 {
     margin-left: 5%;
     width: 42.5%;
     height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #nextButton {
@@ -76,6 +79,7 @@ h5 {
     width: 42.5%;
     height: auto;
     position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-title {
@@ -98,10 +102,13 @@ h5 {
 #listBtn {
     margin-top: 50px;
     font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #downloadBtn {
+    margin-top: 15px;
     font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .list-group {
