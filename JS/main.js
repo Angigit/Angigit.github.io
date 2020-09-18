@@ -16,7 +16,7 @@ function getServerData(url) {
 }
 
 function getPreviousCard() {
-    getServerData("http://my-json-server.typicode.com/angigit.github.io").then(
+    getServerData("http://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => {
             previousCardBody(data, "cardBody")
         }
@@ -48,7 +48,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    getServerData("http://my-json-server.typicode.com/angigit.github.io").then(
+    getServerData("http://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => {
             nextCardBody(data, "cardBody")
         }
@@ -83,7 +83,7 @@ function nextCardBody(data, cardID) {
 }) */
 
 function getDataToPDF() {
-    getServerData("http://my-json-server.typicode.com/angigit.github.io").then(
+    getServerData("http://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => {
             exportToPDF(data, "cardsTable")
         }
@@ -136,7 +136,7 @@ function exportToPDF(data, tableID) {
 
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    getServerData("http://my-json-server.typicode.com/angigit.github.io").then(
+    getServerData("http://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => fillDataTable(data, "cardsTable")
     );
 }
@@ -186,7 +186,7 @@ function createAnyElement(name, attributes) {
 }
 
 function getFilteredCards() {
-    getServerData("http://my-json-server.typicode.com/angigit.github.io").then(
+    getServerData("http://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => filterTable(data, "cardsTable")
     );
 }
@@ -242,7 +242,7 @@ function createUser() {
     };
 
     //elindítjuk a fetch-et a szerver felé
-    fetch("http://my-json-server.typicode.com/angigit.github.io", fetchOptions).then(
+    fetch("http://my-json-server.typicode.com/angigit/angigit.github.io", fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
