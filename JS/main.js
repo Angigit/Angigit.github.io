@@ -16,7 +16,7 @@ function getServerData(url) {
 }
 
 function getPreviousCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             previousCardBody(data, "cardBody")
         }
@@ -48,7 +48,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             nextCardBody(data, "cardBody")
         }
@@ -83,7 +83,7 @@ function nextCardBody(data, cardID) {
 }) */
 
 function getDataToPDF() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             exportToPDF(data, "cardsTable")
         }
@@ -136,7 +136,7 @@ function exportToPDF(data, tableID) {
 
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => fillDataTable(data, "cardsTable")
     );
 }
@@ -186,7 +186,7 @@ function createAnyElement(name, attributes) {
 }
 
 function getFilteredCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => filterTable(data, "cardsTable")
     );
 }
@@ -242,7 +242,8 @@ function createUser() {
     };
 
     //elindítjuk a fetch-et a szerver felé
-    fetch("https://my-json-server.typicode.com/angigit/angigit.github.io", fetchOptions).then(
+    //https://my-json-server.typicode.com/<your-username>/<your-repo>
+    fetch("https://my-json-server.typicode.com/angigit/angigit.github.io/cards", fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
