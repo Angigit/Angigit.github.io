@@ -7,7 +7,8 @@ function getServerData(url) {
     let fetchOptions = {
         method: "GET",
         mode: "cors",
-        cache: "no-cache"
+        cache: "no-cache",
+        credentials: 'same-origin'
     };
     return fetch(url, fetchOptions).then(
         response => response.json(),
@@ -186,7 +187,7 @@ function createAnyElement(name, attributes) {
 }
 
 /* function getFilteredCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => filterTable(data, "cardsTable")
     );
 } */
@@ -235,6 +236,7 @@ function createUser() {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
+        credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -247,7 +249,12 @@ function createUser() {
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
-        data => console.log(data)
+        data => {
+            console.log('Success:', data);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          }
     );
     //console.log(data);
 }
