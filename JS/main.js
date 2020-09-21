@@ -185,11 +185,11 @@ function createAnyElement(name, attributes) {
     return element;
 }
 
-function getFilteredCards() {
+/* function getFilteredCards() {
     getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => filterTable(data, "cardsTable")
     );
-}
+} */
 
 //Filter table
 function filterTable(data, tableID) {
