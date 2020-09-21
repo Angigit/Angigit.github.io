@@ -16,7 +16,7 @@ function getServerData(url) {
 }
 
 function getPreviousCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             previousCardBody(data, "cardBody")
         }
@@ -48,8 +48,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    //https://jsonplaceholder.typicode.com/db
-    getServerData("https://jsonplaceholder.typicode.com/db").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             nextCardBody(data, "cardBody")
         }
@@ -84,7 +83,7 @@ function nextCardBody(data, cardID) {
 }) */
 
 function getDataToPDF() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             exportToPDF(data, "cardsTable")
         }
@@ -137,7 +136,7 @@ function exportToPDF(data, tableID) {
 
 //kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => fillDataTable(data, "cardsTable")
     );
 }
@@ -244,7 +243,7 @@ function createUser() {
 
     //elindítjuk a fetch-et a szerver felé
     //https://my-json-server.typicode.com/<your-username>/<your-repo>
-    fetch("https://my-json-server.typicode.com/angigit/angigit.github.io", fetchOptions).then(
+    fetch("https://my-json-server.typicode.com/angigit/angigit.github.io/cards", fetchOptions).then(
         resp => resp.json(),  //kapunk egy json választ
         err => console.error(err)
     ).then(
