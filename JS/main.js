@@ -159,10 +159,10 @@ function exportToPDF(data, tableID) {
     dd.content.push({ text: 'Lista', style: ['f18', 'strong'] });
     for (let row of data) {
         dd.content.push({ columns: [{ text: row }] });
-        //dd.content.push(' ');
+        dd.content.push(' ');
         for (let k of keys) {
             dd.content.push({ columns: [{ text: k, bold: true }, { text: row[k] }] });
-            dd.content.push(' ');
+            //dd.content.push(' ');
         }
     }
 
