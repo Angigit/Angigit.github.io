@@ -55,6 +55,118 @@
       "Témakör": "Bemutatkozás",
       "Megnevezés2": "Szia!",
       "id": 7
+    },
+    {
+      "Megnevezés1": "That's Brilliant!",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Munkahely",
+      "Megnevezés2": "Ez zseniális!",
+      "id": 8
+    },
+    {
+      "Megnevezés1": "Have a good job!",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Munkahely",
+      "Megnevezés2": "Jó munkát!",
+      "id": 9
+    },
+    {
+      "Megnevezés1": "Do your homework!",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Iskola",
+      "Megnevezés2": "Csináld meg a házi feladatodat!",
+      "id": 10
+    },
+    {
+      "Megnevezés1": "Every schoolboy knows",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Iskola",
+      "Megnevezés2": "Minden iskolás tudja",
+      "id": 11
+    },
+    {
+      "Megnevezés1": "A table for two, please.",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Étterem",
+      "Megnevezés2": "Kérek egy asztalt két főre!",
+      "id": 12
+    },
+    {
+      "Megnevezés1": "May we sit at this table?",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Étterem",
+      "Megnevezés2": "Leülhetünk ehhez az asztaljoz?",
+      "id": 13
+    },
+    {
+      "Megnevezés1": "Where is the nearest restaurant?",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Utazás",
+      "Megnevezés2": "Hol van a legközelebbi étterem?",
+      "id": 14
+    },
+    {
+      "Megnevezés1": "Do you have any allergies?",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Orvosnál",
+      "Megnevezés2": "Allergiás vagy valamire?",
+      "id": 15
+    },
+    {
+      "Megnevezés1": "Is this on sale?",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Vásárlás",
+      "Megnevezés2": "Ez akciós?",
+      "id": 16
+    },
+    {
+      "Megnevezés1": "Can I pay with my credit card?",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Vásárlás",
+      "Megnevezés2": "Fizethetek a hitelkártyámmal?",
+      "id": 17
+    },
+    {
+      "Megnevezés1": "A dog is a man's best friend.",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Állatok",
+      "Megnevezés2": "A kutya az ember legjobb barátja.",
+      "id": 18
+    },
+    {
+      "Megnevezés1": "Life is like a rainbow.",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Színek",
+      "Megnevezés2": "Az élet olyan, mint egy szivárvány.",
+      "id": 19
+    },
+    {
+      "Megnevezés1": "A bunch of fives.",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Számok",
+      "Megnevezés2": "Egy rakás ötös.",
+      "id": 20
+    },
+    {
+      "Megnevezés1": "A picture is worth a thousand words.",
+      "Nyelv1": "Angol",
+      "Nyelv2": "Magyar",
+      "Témakör": "Számok",
+      "Megnevezés2": "Egy kép többet ér ezer szónál.",
+      "id": 21
     }
   ]
 }
