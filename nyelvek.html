@@ -40,7 +40,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./hozzaadas.html">Hozzáadás</a>
-                        <a class="dropdown-item" href="#">Törlés</a>
+                        <a class="dropdown-item" href="./torles.html">Törlés</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -51,7 +51,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
+                <input id="langInput" class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
                 <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
             </form>
         </div>
@@ -66,8 +66,12 @@
                 <div class="title2">
                     <h6>A kártyák -> hozzáadás menüpontban az adatok megadásánál lehet kiválasztani a kívánt nyelvet.</h6>
                 </div>
+                <div>
+                    <img class="lang-img1" src="./lib/images/german.jpg" alt="card">
+                    <img class="lang-img2" src="./lib/images/brasilian.jpg" alt="card">
+                </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="langList">
                 <ul class="list-group" id="lang-list">
                     <li class="list-group-item">Angol</li>
                     <li class="list-group-item">Német</li>
@@ -79,7 +83,22 @@
                     <li class="list-group-item">Orosz</li>
                 </ul>
             </div>
-            <div class="col-sm-3"></div>
+            <script>
+                $(document).ready(function () {
+                    $("#langInput").on("keyup", function () {
+                        var value = $(this).val().toLowerCase();
+                        $("#langList li").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                });
+            </script>
+            <div class="col-sm-3">
+                <img class="lang-img3" src="./lib/images/english.jpg" alt="card">   
+                <img class="lang-img4" src="./lib/images/french.jpg" alt="card">
+                <img class="lang-img5" src="./lib/images/italian.jpg" alt="card">
+                <img class="lang-img6" src="./lib/images/spanish.jpg" alt="card">
+            </div>
         </div>
     </div>
 </body>

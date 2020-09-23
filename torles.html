@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listák</title>
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body onload="getCardsAfterDelete()">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent">
+            <!--aria-expanded="false" aria-label="Toggle navigation"-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Főoldal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nyelvek.html">Nyelvek </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./temakorok.html">Témakörök </a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kártyák
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./hozzaadas.html">Hozzáadás</a>
+                        <a class="dropdown-item" href="./torles.html">Törlés</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./listak.html">Listák</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./teszt1.html">Tesztek</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="listInput" class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="button" onclick="getFilteredCards()"><i
+                        class="fa fa-search"></i></i></button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="del-title">
+                <h6>Ezen az oldalon lehet törölni egy kártyát. A sor végén található törlés gombra kattintva a rendszer megkérdezi, hogy tényleg akarjuk-e törölni a kártyát? Amennyiben igen, a kártya véglegesen törlésre kerül. Természetesen lehetőség van bármikor újra hozzáadni egy kártyát a többihez.</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="table-responsive">
+            <table id="cardsTable" class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">#</th>
+                        <th style="width: 250px;">Megnevezés</th>
+                        <th style="width: 250px;">Nyelv</th>
+                        <th style="width: 250px;">Megnevezés</th>
+                        <th style="width: 250px;">Nyelv</th>
+                        <th style="width: 250px;">Témakör</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>

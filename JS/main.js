@@ -43,7 +43,33 @@ function previousCardBody(data, cardID) {
         cardsubTitle.innerHTML = data[index][keys[2]];
         cardTitle2.innerHTML = data[index][keys[3]];
         cardsubTitle2.innerHTML = data[index][keys[4]];
-        theme.innerHTML = data[index][keys[5]];
+        
+        //Change fontcolor
+        switch (data[index][keys[5]]) {
+            case "Bemutatkozás": theme.innerHTML = data[index][keys[5]].fontcolor("maroon");
+                break;
+            case "Otthon": theme.innerHTML = data[index][keys[5]].fontcolor("purple");
+                break;
+            case "Munkahely": theme.innerHTML = data[index][keys[5]].fontcolor("green");
+                break;
+            case "Iskola": theme.innerHTML = data[index][keys[5]].fontcolor("blue");
+                break;
+            case "Étterem": theme.innerHTML = data[index][keys[5]].fontcolor("olive");
+                break;
+            case "Utazás": theme.innerHTML = data[index][keys[5]].fontcolor("orange");
+                break;
+            case "Orvosnál": theme.innerHTML = data[index][keys[5]].fontcolor("red");
+                break;
+            case "Vásárlás": theme.innerHTML = data[index][keys[5]].fontcolor("hotpink");
+                break;
+            case "Állatok": theme.innerHTML = data[index][keys[5]].fontcolor("skyblue");
+                break;
+            case "Színek": theme.innerHTML = data[index][keys[5]].fontcolor("coral");
+                break;
+            case "Számok": theme.innerHTML = data[index][keys[5]].fontcolor("skyblue");
+                break;
+            default: theme.innerHTML = data[index][keys[5]].fontcolor("white");
+        }
     }
     console.log(data[index][keys[1]]);
 }
@@ -70,18 +96,36 @@ function nextCardBody(data, cardID) {
         cardsubTitle.innerHTML = data[index][keys[2]];
         cardTitle2.innerHTML = data[index][keys[3]];
         cardsubTitle2.innerHTML = data[index][keys[4]];
-        theme.innerHTML = data[index][keys[5]];
+        
+        //Change fontcolor
+        switch (data[index][keys[5]]) {
+            case "Bemutatkozás": theme.innerHTML = data[index][keys[5]].fontcolor("maroon");
+                break;
+            case "Otthon": theme.innerHTML = data[index][keys[5]].fontcolor("purple");
+                break;
+            case "Munkahely": theme.innerHTML = data[index][keys[5]].fontcolor("green");
+                break;
+            case "Iskola": theme.innerHTML = data[index][keys[5]].fontcolor("blue");
+                break;
+            case "Étterem": theme.innerHTML = data[index][keys[5]].fontcolor("olive");
+                break;
+            case "Utazás": theme.innerHTML = data[index][keys[5]].fontcolor("orange");
+                break;
+            case "Orvosnál": theme.innerHTML = data[index][keys[5]].fontcolor("red");
+                break;
+            case "Vásárlás": theme.innerHTML = data[index][keys[5]].fontcolor("hotpink");
+                break;
+            case "Állatok": theme.innerHTML = data[index][keys[5]].fontcolor("skyblue");
+                break;
+            case "Színek": theme.innerHTML = data[index][keys[5]].fontcolor("coral");
+                break;
+            case "Számok": theme.innerHTML = data[index][keys[5]].fontcolor("skyblue");
+                break;
+            default: theme.innerHTML = data[index][keys[5]].fontcolor("white");
+        }
     }
     console.log(data[index][keys[1]]);
 }
-
-//Export data into PDF with jQuery
-/* $('#downloadBtn').click(() => {
-    var pdf = new jsPDF();
-    pdf.addHTML(document.querySelector("#cardsTable"),function() {
-        pdf.save('lista.pdf');
-    });
-}) */
 
 function getDataToPDF() {
     getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
@@ -126,35 +170,24 @@ function exportToPDF(data, tableID) {
     //pdfMake.createPdf(docDefinition).download();
 }
 
-/* $(document).ready(function () {
-    $('#cardsTable').DataTable({
-        dom: 'Bfrtip',
-        buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-    });
-}); */
-
-//kiszervezzük egy külön függvénybe a getServerData-t
 function getCards() {
     getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => fillDataTable(data, "cardsTable")
     );
 }
 
-/*Feltöltjük a táblázatot a szerveradatokkal. A függvény univerzális, tehát más táblázatokhoz is használható.*/
 //Fill table with server data
 function fillDataTable(data, tableID) {
-    let table = document.querySelector(`#${tableID}`);  /*kiválasztjuk a táblázatot a table id alapján --> behelyettesítettük a selektor stringbe a kapott tableID-t*/
+    let table = document.querySelector(`#${tableID}`); 
     if (!table) {
         console.error(`Table "${tableID}" is not found.`);
         return;
     }
 
-    //Add new user row to the table
-    let tBody = table.querySelector("tbody"); //ebbe fogjuk az adatokat beletölteni.
+    //Add new row to the table
+    let tBody = table.querySelector("tbody"); 
     tBody.innerHTML = '';
-    for (let row of data) { //az adatsorokat egyesével kiolvassuk a data tömbből
+    for (let row of data) { 
         let tr = createAnyElement("tr");
         for (let k of keys) {
             let td = createAnyElement("td");
@@ -163,18 +196,6 @@ function fillDataTable(data, tableID) {
         }
         tBody.appendChild(tr);
     }
-
-    /* $('#cardsTable').dataTable({
-        data: data,
-        columns: [
-            { data: 'id' },
-            { data: 'megnev1' },
-            { data: 'nyelv1' },
-            { data: 'megnev2' },
-            { data: 'nyelv2' },
-            { data: 'tema' }
-        ]
-    }); */
 }
 
 //Létrehozunk egy függvényt, amivel bármilyen html elemet le tudunk gyártani.
@@ -203,10 +224,10 @@ function filterTable(data, tableID) {
     let filter, txtValue;
     let searchInput = document.getElementById("listInput");
     filter = searchInput.value.toUpperCase();
-    let tBody = table.querySelector("tbody"); //ebbe fogjuk az adatokat beletölteni.
+    let tBody = table.querySelector("tbody");
     tBody.innerHTML = '';
 
-    for (let row of data) { //az adatsorokat egyesével kiolvassuk a data tömbből
+    for (let row of data) { 
         let tr = createAnyElement("tr");
         for (let k of keys) {
             let td = createAnyElement("td");
@@ -219,15 +240,14 @@ function filterTable(data, tableID) {
                 } else {
                     console.log("Nincs találat!");
                 }
-                //tr.appendChild(td);
             }
             tBody.appendChild(tr);
         }
     }
 }
 
-//Create new user - Össze kell szedni az adatokat az input-okból
-function createUser() {
+//Create new card - Össze kell szedni az adatokat az input-okból
+function createCard() {
     let data = getFormData();
     delete data.id;  //hogy ne adjon hozzá új id-t, mert a json szerver figyeli és automatikusan létrehozza az új id-t.
 
@@ -277,4 +297,73 @@ function getFormData() {
     return data;
 }
 
+function getCardsAfterDelete() {
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+        data => fillDataTable2(data, "cardsTable")
+    );
+}
+
+//Fill table with server data
+function fillDataTable2(data, tableID) {
+    let table = document.querySelector(`#${tableID}`); 
+    if (!table) {
+        console.error(`Table "${tableID}" is not found.`);
+        return;
+    }
+
+    //Add new row to the table
+    let tBody = table.querySelector("tbody");
+    tBody.innerHTML = '';
+    for (let row of data) { 
+        let tr = createAnyElement("tr");
+        for (let k of keys) {
+            let td = createAnyElement("td");
+            td.innerHTML = row[k];
+            tr.appendChild(td);
+        }
+        //Add delete button to the row
+        let btnGroup = createBtnGroup();
+        tr.appendChild(btnGroup);
+        tBody.appendChild(tr);
+    }
+}
+
+//Create delete button
+function createBtnGroup() {
+    let group = createAnyElement("div", { class: "btn btn-group" });
+    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delCard(this)" });
+    delBtn.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
+
+    group.appendChild(delBtn);
+
+    let td = createAnyElement("td");
+    td.appendChild(group);
+    return td;
+}
+
+//Delete card
+function delCard(btn) {
+    let tr = btn.parentElement.parentElement.parentElement;
+    let id = tr.querySelector("td:first-child").innerHTML;
+
+    //megadjuk a fetch beállítást
+    let fetchOptions = {
+        method: "DELETE",
+        mode: "cors",
+        cache: "no-cache",
+    };
+
+    //majd elindítjuk a fetch-et a szerver felé
+    //a fetchOption-ből fogja tudni a szerver, hogy ez egy delete lesz.
+    if (confirm("Biztosan törli a kártyát?")) {
+        fetch(`https://my-json-server.typicode.com/angigit/angigit.github.io/cards/${id}`, fetchOptions).then(
+            resp => resp.json(),
+            err => console.log(err)
+        ).then(
+            data => {
+                getCardsAfterDelete();
+            }
+        );
+    }
+}
 

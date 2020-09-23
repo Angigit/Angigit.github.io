@@ -18,7 +18,6 @@ body {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
     text-align: justify;
     word-spacing: 3px;
     border-bottom-style: solid;
@@ -34,6 +33,25 @@ h5 {
 .testButtons1 {
     margin-left: 20px;
     margin-bottom: 30px;
+}
+
+/*hozzaadas.html*/
+.fieldset {
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+#cardForm {
+    margin-left: 20px;
+}
+
+.add-img, .add-img2 {
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    border-radius: 6px;
 }
 
 /*index.html*/
@@ -96,7 +114,7 @@ h5 {
 
 /*listak.html*/
 #cardsTable {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 #listBtn {
@@ -108,6 +126,7 @@ h5 {
 #downloadBtn {
     margin-top: 15px;
     font-weight: bold;
+    padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -117,9 +136,53 @@ h5 {
 
 /*nyelvek.html*/
 #lang-list {
+    margin-top: 50px;
     text-align: center;
     margin-left: 80px;
     margin-right: 80px;
+}
+
+.lang-img1, .lang-img3, .lang-img5 {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38%;
+    height: auto;
+}
+
+.lang-img2, .lang-img4, .lang-img6 {
+    margin-top: 50px;
+    margin-left: 98px;
+    margin-right: auto;
+    width: 38%;
+    height: auto;
+}
+
+/*temakorok.html*/
+.theme-img1 {
+    margin-top: 41px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 8%;
+    border: 1px solid #ccc;
+}
+
+.theme-img2, .theme-img3, .theme-img4, .theme-img5, .theme-img6, .theme-img7, .theme-img8, .theme-img9, .theme-img10 {
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 8%;
+}
+
+.theme-img11 {
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 8%;
+    border: 1px solid #ccc;
 }
 
 /*teszt1-teszt2-teszt3.html*/
@@ -133,6 +196,30 @@ h5 {
     border-bottom-color: darkslategrey;
 }
 
+.test1-img {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+    width: 80%;
+    height: auto;
+}
+
+.test2-img {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.test3-img {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
 #test-nav {
     margin-top: 40px;
 }
@@ -144,5 +231,16 @@ h5 {
 .question {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+/*torles.html*/
+.del-title {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    word-spacing: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: darkslategrey;
 }
 
