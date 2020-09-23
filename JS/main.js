@@ -8,7 +8,7 @@ function getServerData(url) {
         method: "GET",
         mode: "cors",
         cache: "no-cache",
-        credentials: 'same-origin'
+        credentials: "same-origin"
     };
     return fetch(url, fetchOptions).then(
         response => response.json(),
@@ -75,7 +75,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
         data => {
             nextCardBody(data, "cardBody")
         }
@@ -159,7 +159,7 @@ function exportToPDF(data, tableID) {
     dd.content.push({ text: 'Lista', style: ['f18', 'strong'] });
     for (let row of data) {
         dd.content.push({ columns: [{ text: row }] });
-        dd.content.push(' ');
+        //dd.content.push(' ');
         for (let k of keys) {
             dd.content.push({ columns: [{ text: k, bold: true }, { text: row[k] }] });
             dd.content.push(' ');
@@ -256,7 +256,7 @@ function createCard() {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
-        credentials: 'same-origin',
+        credentials: "same-origin",
         headers: {
             'Content-Type': 'application/json'
         },
@@ -351,6 +351,7 @@ function delCard(btn) {
         method: "DELETE",
         mode: "cors",
         cache: "no-cache",
+        credentials: "same-origin",
     };
 
     //majd elindítjuk a fetch-et a szerver felé
