@@ -75,7 +75,7 @@ function previousCardBody(data, cardID) {
 }
 
 function getNextCard() {
-    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io/cards").then(
+    getServerData("https://my-json-server.typicode.com/angigit/angigit.github.io").then(
         data => {
             nextCardBody(data, "cardBody")
         }
