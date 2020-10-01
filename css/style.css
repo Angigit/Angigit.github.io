@@ -134,16 +134,13 @@ h5 {
     margin-top: 40px;
 }
 
-.list-group-item {
-    padding-bottom: 22px;
-}
-
 /*nyelvek.html*/
 #lang-list {
     margin-top: 50px;
     text-align: center;
     margin-left: 80px;
     margin-right: 80px;
+    
 }
 
 .lang-img1, .lang-img3, .lang-img5 {
@@ -163,30 +160,20 @@ h5 {
 }
 
 /*temakorok.html*/
-.theme-img1 {
-    margin-top: 41px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 8%;
-    border: 1px solid #ccc;
+.list-group-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.theme-img2, .theme-img3, .theme-img4, .theme-img5, .theme-img6, .theme-img7, .theme-img8, .theme-img9, .theme-img10 {
-    margin-top: 2px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 8%;
+.clearfix {
+    overflow: auto;
 }
 
-.theme-img11 {
-    margin-top: 2px;
-    margin-left: auto;
+.theme-img {
+    float: right;
+    margin-left: 1%;
     margin-right: auto;
-    width: 100%;
-    height: 8%;
-    border: 1px solid #ccc;
+    width: 24%;
 }
 
 /*teszt1-teszt2-teszt3.html*/
@@ -200,18 +187,36 @@ h5 {
     border-bottom-color: darkslategrey;
 }
 
+#sendBtn {
+    font-weight: bold;
+}
+
+.fa.fa-check {
+    margin-left: 14px;
+    display: none;
+    font-size: 24px;
+    color: green;
+}
+
+.fa.fa-close {
+    margin-left: 14px;
+    display: none;
+    font-size: 24px;
+    color: red;
+}
+
 .test1-img {
     margin-top: 50px;
     margin-left: auto;
-    margin-right: 20px;
-    width: 70%;
+    margin-right: auto;
+    width: 80%;
     height: auto;
 }
 
 .test2-img {
     margin-top: 60px;
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: auto;
     width: 100%;
     height: auto;
 }
@@ -232,11 +237,6 @@ h5 {
     color: darkslategrey;
 }
 
-.question {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 /*torles.html*/
 .del-title {
     margin-top: 50px;
@@ -247,4 +247,5 @@ h5 {
     border-bottom-style: solid;
     border-bottom-color: darkslategrey;
 }
+
 

@@ -368,3 +368,399 @@ function delCard(btn) {
     }
 }
 
+//Checking test results
+function checkTest1() {
+    /* for (let j = 0; j < checks.length; j++) {
+        checks[j].innerHTML = " Helyes válasz!";
+        checks[j].style.display = "inline";
+    }
+    for (let l = 0; l < closes.length; l++) {
+        closes[l].style.display = "inline";
+    } */
+    let checks = document.querySelectorAll("#test1 h1.fa.fa-check");
+    let closes = document.querySelectorAll("#test1 h1.fa.fa-close");
+    let radioChecked = document.querySelectorAll('#test1 input[type="radio"]:checked');
+    //quetsion 1
+    for (let i = 0; i < radioChecked.length; i++) {
+        let radio1 = document.getElementById("radio1");
+        if (radio1.checked) {
+            checks[0].innerHTML = " Helyes válasz!";
+            checks[0].style.display = "inline";
+        } else if (radioChecked[i].value == "airplanes") {
+            closes[0].style.display = "inline";
+            closes2[0].style.display = "inline";
+        } else if (radioChecked[i].value == "airplane") {
+            closes[1].style.display = "inline";
+            closes2[1].style.display = "inline";
+        } else if (radioChecked[i].value == "the airplanes") {
+            closes[2].style.display = "inline";
+            closes2[2].style.display = "inline";
+        }
+        //quetsion 2
+        let radio2 = document.getElementById("radio2");
+        if (radio2.checked) {
+            checks[1].innerHTML = " Helyes válasz!";
+            checks[1].style.display = "inline";
+        } else if (radioChecked[i].value == "She is") {
+            closes[3].style.display = "inline";
+        } else if (radioChecked[i].value == "You are") {
+            closes[4].style.display = "inline";
+        } else if (radioChecked[i].value == "Are their") {
+            closes[5].style.display = "inline";
+        }
+        //quetsion 3
+        let radio3 = document.getElementById("radio3");
+        if (radio3.checked) {
+            checks[2].innerHTML = " Helyes válasz!";
+            checks[2].style.display = "inline";
+        } else if (radioChecked[i].value == "his friends") {
+            closes[6].style.display = "inline";
+        } else if (radioChecked[i].value == "our boyfriend") {
+            closes[7].style.display = "inline";
+        } else if (radioChecked[i].value == "our friends") {
+            closes[8].style.display = "inline";
+        }
+        //quetsion 4
+        let radio4 = document.getElementById("radio4");
+        if (radio4.checked) {
+            checks[3].innerHTML = " Helyes válasz!";
+            checks[3].style.display = "inline";
+        } else if (radioChecked[i].value == "was") {
+            closes[9].style.display = "inline";
+        } else if (radioChecked[i].value == "have got") {
+            closes[10].style.display = "inline";
+        } else if (radioChecked[i].value == "have") {
+            closes[11].style.display = "inline";
+        }
+        //quetsion 5
+        let radio5 = document.getElementById("radio5");
+        if (radio5.checked) {
+            checks[4].innerHTML = " Helyes válasz!";
+            checks[4].style.display = "inline";
+        } else if (radioChecked[i].value == "am") {
+            closes[12].style.display = "inline";
+        } else if (radioChecked[i].value == "are") {
+            closes[13].style.display = "inline";
+        } else if (radioChecked[i].value == "aren't") {
+            closes[14].style.display = "inline";
+        }
+        //question 6
+        let radio6 = document.getElementById("radio6");
+        if (radio6.checked) {
+            checks[5].innerHTML = " Helyes válasz!";
+            checks[5].style.display = "inline";
+        } else if (radioChecked[i].value == "our") {
+            closes[15].style.display = "inline";
+        } else if (radioChecked[i].value == "live") {
+            closes[16].style.display = "inline";
+        } else if (radioChecked[i].value == "come from") {
+            closes[17].style.display = "inline";
+        }
+        //quetsion 7
+        let radio7 = document.getElementById("radio7");
+        if (radio7.checked) {
+            checks[6].innerHTML = " Helyes válasz!";
+            checks[6].style.display = "inline";
+        } else if (radioChecked[i].value == "They are") {
+            closes[18].style.display = "inline";
+        } else if (radioChecked[i].value == "There is") {
+            closes[19].style.display = "inline";
+        } else if (radioChecked[i].value == "There's") {
+            closes[20].style.display = "inline";
+        }
+        //quetsion 8
+        let radio8 = document.getElementById("radio8");
+        if (radio8.checked) {
+            checks[7].innerHTML = " Helyes válasz!";
+            checks[7].style.display = "inline";
+        } else if (radioChecked[i].value == "an apple") {
+            closes[21].style.display = "inline";
+        } else if (radioChecked[i].value == "a apple") {
+            closes[22].style.display = "inline";
+        } else if (radioChecked[i].value == "apple") {
+            closes[23].style.display = "inline";
+        }
+        //quetsion 9
+        let radio9 = document.getElementById("radio9");
+        if (radio9.checked) {
+            checks[8].innerHTML = " Helyes válasz!";
+            checks[8].style.display = "inline";
+        } else if (radioChecked[i].value == "Has she") {
+            closes[24].style.display = "inline";
+        } else if (radioChecked[i].value == "Have they") {
+            closes[25].style.display = "inline";
+        } else if (radioChecked[i].value == "Have she got") {
+            closes[26].style.display = "inline";
+        }
+        //question 10
+        let radio10 = document.getElementById("radio10");
+        if (radio10.checked) {
+            checks[9].innerHTML = " Helyes válasz!";
+            checks[9].style.display = "inline";
+        } else if (radioChecked[i].value == "She have") {
+            closes[27].style.display = "inline";
+        } else if (radioChecked[i].value == "They are") {
+            closes[28].style.display = "inline";
+        } else if (radioChecked[i].value == "We haven't") {
+            closes[29].style.display = "inline";
+        }
+    }
+}
+
+function checkTest2() {
+    let checks2 = document.querySelectorAll("#test2 h1.fa.fa-check");
+    let closes2 = document.querySelectorAll("#test2 h1.fa.fa-close");
+    let radioChecked2 = document.querySelectorAll('#test2 input[type="radio"]:checked');
+    //quetsion 1
+    for (let j = 0; j < radioChecked2.length; j++) {
+        let radio21 = document.getElementById("radio2-1");
+        if (radio21.checked) {
+            checks2[0].innerHTML = " Helyes válasz!";
+            checks2[0].style.display = "inline";
+        } else if (radioChecked2[j].value == "no any") {
+            closes2[0].style.display = "inline";
+        } else if (radioChecked2[j].value == "a") {
+            closes2[1].style.display = "inline";
+        } else if (radioChecked2[j].value == "any") {
+            closes2[2].style.display = "inline";
+        }
+        //quetsion 2
+        let radio22 = document.getElementById("radio2-2");
+        if (radio22.checked) {
+            checks2[1].innerHTML = " Helyes válasz!";
+            checks2[1].style.display = "inline";
+        } else if (radioChecked2[j].value == "are") {
+            closes2[3].style.display = "inline";
+        } else if (radioChecked2[j].value == "haven't") {
+            closes2[4].style.display = "inline";
+        } else if (radioChecked2[j].value == "have got") {
+            closes2[5].style.display = "inline";
+        }
+        //quetsion 3
+        let radio23 = document.getElementById("radio2-3");
+        if (radio23.checked) {
+            checks2[2].innerHTML = " Helyes válasz!";
+            checks2[2].style.display = "inline";
+        } else if (radioChecked2[j].value == "Is it any") {
+            closes2[6].style.display = "inline";
+        } else if (radioChecked2[j].value == "There is some") {
+            closes2[7].style.display = "inline";
+        } else if (radioChecked2[j].value == "Are there much") {
+            closes2[8].style.display = "inline";
+        }
+        //quetsion 4
+        let radio24 = document.getElementById("radio2-4");
+        if (radio24.checked) {
+            checks2[3].innerHTML = " Helyes válasz!";
+            checks2[3].style.display = "inline";
+        } else if (radioChecked2[j].value == "Has she") {
+            closes2[9].style.display = "inline";
+        } else if (radioChecked2[j].value == "Have she got") {
+            closes2[10].style.display = "inline";
+        } else if (radioChecked2[j].value == "Have you") {
+            closes2[11].style.display = "inline";
+        }
+        //quetsion 5
+        let radio25 = document.getElementById("radio2-5");
+        if (radio25.checked) {
+            checks2[4].innerHTML = " Helyes válasz!";
+            checks2[4].style.display = "inline";
+        } else if (radioChecked2[j].value == "am take") {
+            closes2[12].style.display = "inline";
+        } else if (radioChecked2[j].value == "take") {
+            closes2[13].style.display = "inline";
+        } else if (radioChecked2[j].value == "taking") {
+            closes2[14].style.display = "inline";
+        }
+        //question 6
+        let radio26 = document.getElementById("radio2-6");
+        if (radio26.checked) {
+            checks2[5].innerHTML = " Helyes válasz!";
+            checks2[5].style.display = "inline";
+        } else if (radioChecked2[j].value == "studying") {
+            closes2[15].style.display = "inline";
+        } else if (radioChecked2[j].value == "studies") {
+            closes2[16].style.display = "inline";
+        } else if (radioChecked2[j].value == "doesn't study") {
+            closes2[17].style.display = "inline";
+        }
+        //quetsion 7
+        let radio27 = document.getElementById("radio2-7");
+        if (radio27.checked) {
+            checks2[6].innerHTML = " Helyes válasz!";
+            checks2[6].style.display = "inline";
+        } else if (radioChecked2[j].value == "Comes she") {
+            closes2[18].style.display = "inline";
+        } else if (radioChecked2[j].value == "Do you come") {
+            closes2[19].style.display = "inline";
+        } else if (radioChecked2[j].value == "She coming") {
+            closes2[20].style.display = "inline";
+        }
+        //quetsion 8
+        let radio28 = document.getElementById("radio2-8");
+        if (radio28.checked) {
+            checks2[7].innerHTML = " Helyes válasz!";
+            checks2[7].style.display = "inline";
+        } else if (radioChecked2[j].value == "Do your friend work") {
+            closes2[21].style.display = "inline";
+        } else if (radioChecked2[j].value == "Works she") {
+            closes2[22].style.display = "inline";
+        } else if (radioChecked2[j].value == "Work you") {
+            closes2[23].style.display = "inline";
+        }
+        //quetsion 9
+        let radio29 = document.getElementById("radio2-9");
+        if (radio29.checked) {
+            checks2[8].innerHTML = " Helyes válasz!";
+            checks2[8].style.display = "inline";
+        } else if (radioChecked2[j].value == "going to") {
+            closes2[24].style.display = "inline";
+        } else if (radioChecked2[j].value == "will getting") {
+            closes2[25].style.display = "inline";
+        } else if (radioChecked2[j].value == "is going") {
+            closes2[26].style.display = "inline";
+        }
+        //question 10
+        let radio210 = document.getElementById("radio2-10");
+        if (radio210.checked) {
+            checks2[9].innerHTML = " Helyes válasz!";
+            checks2[9].style.display = "inline";
+        } else if (radioChecked2[j].value == "isn't answering") {
+            closes2[27].style.display = "inline";
+        } else if (radioChecked2[j].value == "will not be answer") {
+            closes2[28].style.display = "inline";
+        } else if (radioChecked2[j].value == "doesn't answer") {
+            closes2[29].style.display = "inline";
+        }
+    }
+}
+
+function checkTest3() {
+    let checks3 = document.querySelectorAll("#test3 h1.fa.fa-check");
+    let closes3 = document.querySelectorAll("#test3 h1.fa.fa-close");
+    let radioChecked3 = document.querySelectorAll('#test3 input[type="radio"]:checked');
+    //quetsion 1
+    for (let k = 0; k < radioChecked3.length; k++) {
+        let radio31 = document.getElementById("radio3-1");
+        if (radio31.checked) {
+            checks3[0].innerHTML = " Helyes válasz!";
+            checks3[0].style.display = "inline";
+        } else if (radioChecked3[k].value == "go") {
+            closes3[0].style.display = "inline";
+        } else if (radioChecked3[k].value == "didn't went") {
+            closes3[1].style.display = "inline";
+        } else if (radioChecked3[k].value == "don't go") {
+            closes3[2].style.display = "inline";
+        }
+        //quetsion 2
+        let radio32 = document.getElementById("radio3-2");
+        if (radio32.checked) {
+            checks3[1].innerHTML = " Helyes válasz!";
+            checks3[1].style.display = "inline";
+        } else if (radioChecked3[k].value == "She won't spend her") {
+            closes3[3].style.display = "inline";
+        } else if (radioChecked3[k].value == "Will she spending her") {
+            closes3[4].style.display = "inline";
+        } else if (radioChecked3[k].value == "Are you spend your") {
+            closes3[5].style.display = "inline";
+        }
+        //quetsion 3
+        let radio33 = document.getElementById("radio3-3");
+        if (radio33.checked) {
+            checks3[2].innerHTML = " Helyes válasz!";
+            checks3[2].style.display = "inline";
+        } else if (radioChecked3[k].value == "a few") {
+            closes3[6].style.display = "inline";
+        } else if (radioChecked3[k].value == "any") {
+            closes3[7].style.display = "inline";
+        } else if (radioChecked3[k].value == "a lots of") {
+            closes3[8].style.display = "inline";
+        }
+        //quetsion 4
+        let radio34 = document.getElementById("radio3-4");
+        if (radio34.checked) {
+            checks3[3].innerHTML = " Helyes válasz!";
+            checks3[3].style.display = "inline";
+        } else if (radioChecked3[k].value == "I haven't got") {
+            closes3[9].style.display = "inline";
+        } else if (radioChecked3[k].value == "I don't") {
+            closes3[10].style.display = "inline";
+        } else if (radioChecked3[k].value == "I have not") {
+            closes3[11].style.display = "inline";
+        }
+        //quetsion 5
+        let radio35 = document.getElementById("radio3-5");
+        if (radio35.checked) {
+            checks3[4].innerHTML = " Helyes válasz!";
+            checks3[4].style.display = "inline";
+        } else if (radioChecked3[k].value == "How many friend") {
+            closes3[12].style.display = "inline";
+        } else if (radioChecked3[k].value == "How much friend") {
+            closes3[13].style.display = "inline";
+        } else if (radioChecked3[k].value == "How much friends") {
+            closes3[14].style.display = "inline";
+        }
+        //question 6
+        let radio36 = document.getElementById("radio3-6");
+        if (radio36.checked) {
+            checks3[5].innerHTML = " Helyes válasz!";
+            checks3[5].style.display = "inline";
+        } else if (radioChecked3[k].value == "you will do") {
+            closes3[15].style.display = "inline";
+        } else if (radioChecked3[k].value == "would you like doing") {
+            closes3[16].style.display = "inline";
+        } else if (radioChecked3[k].value == "are you going doing") {
+            closes3[17].style.display = "inline";
+        }
+        //quetsion 7
+        let radio37 = document.getElementById("radio3-7");
+        if (radio37.checked) {
+            checks3[6].innerHTML = " Helyes válasz!";
+            checks3[6].style.display = "inline";
+        } else if (radioChecked3[k].value == "am going visiting") {
+            closes3[18].style.display = "inline";
+        } else if (radioChecked3[k].value == "can't visit") {
+            closes3[19].style.display = "inline";
+        } else if (radioChecked3[k].value == "am visiting") {
+            closes3[20].style.display = "inline";
+        }
+        //quetsion 8
+        let radio38 = document.getElementById("radio3-8");
+        if (radio38.checked) {
+            checks3[7].innerHTML = " Helyes válasz!";
+            checks3[7].style.display = "inline";
+        } else if (radioChecked3[k].value == "Have you been") {
+            closes3[21].style.display = "inline";
+        } else if (radioChecked3[k].value == "Saw you") {
+            closes3[22].style.display = "inline";
+        } else if (radioChecked3[k].value == "Did you saw") {
+            closes3[23].style.display = "inline";
+        }
+        //quetsion 9
+        let radio39 = document.getElementById("radio3-9");
+        if (radio39.checked) {
+            checks3[8].innerHTML = " Helyes válasz!";
+            checks3[8].style.display = "inline";
+        } else if (radioChecked3[k].value == "nicer then") {
+            closes3[24].style.display = "inline";
+        } else if (radioChecked3[k].value == "more nice than") {
+            closes3[25].style.display = "inline";
+        } else if (radioChecked3[k].value == "much more nice than") {
+            closes3[26].style.display = "inline";
+        }
+        //question 10
+        let radio310 = document.getElementById("radio3-10");
+        if (radio310.checked) {
+            checks3[9].innerHTML = " Helyes válasz!";
+            checks3[9].style.display = "inline";
+        } else if (radioChecked3[k].value == "Has she already finish") {
+            closes3[27].style.display = "inline";
+        } else if (radioChecked3[k].value == "Haven’t she still finished") {
+            closes3[28].style.display = "inline";
+        } else if (radioChecked3[k].value == "She has finished still") {
+            closes2[29].style.display = "inline";
+        }
+    }
+}
+
+

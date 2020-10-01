@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online teszt</title>   
-    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="./node_modules/popper.js/dist/popper.min.js"></script> -->
     <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
@@ -49,7 +49,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
+                <input id="test1-input" class="form-control mr-sm-2" type="search" placeholder="keresés" aria-label="Search">
                 <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></i></button>
             </form>
         </div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="title2">
                     <h6>Ingyenes és gyorsan, egyszerűen felmérhetjük velük a tudásunkat.</h6>
-                </div>           
+                </div>      
             </div>
             <div class="col-sm-6">
                 <ul class="nav justify-content-center" id="test-nav">
@@ -76,225 +76,275 @@
                       <a class="nav-link" id="nav3" href="./teszt3.html">Teszt 3</a>
                     </li>
                 </ul>
-                <fieldset class="test">
+                <fieldset class="test" id="test1">
                     <legend class="test-legend"><h4>Teszt 1</h4></legend>
-                    <span></span>
                     <hr>
                     <div class="question1">
                         <h5>1. This is ......... .</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a1" name="answer1" type="radio" value="300" class="form-group">
-                        <label for="a1">an airplane</label>
+                        <input id="radio1" name="answer1" type="radio" value="an airplane" class="form-group">
+                        <label for="">an airplane</label>
+                        <h1 class="fa fa-check"></h1>                       
                     </div>
                     <div class="form-group">
-                        <input id="a2" name="answer1" type="radio" value="300" class="form-group">
-                        <label for="a2">airplanes</label>
+                        <input name="answer1" type="radio" value="airplanes" class="form-group">
+                        <label for="">airplanes</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a3" name="answer1" type="radio" value="300" class="form-group">
-                        <label for="a3">airplane</label>
+                        <input name="answer1" type="radio" value="airplane" class="form-group">
+                        <label for="">airplane</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a4" name="answer1" type="radio" value="300" class="form-group">
-                        <label for="a4">the airplanes</label>
+                        <input name="answer1" type="radio" value="the airplanes" class="form-group">
+                        <label for="">the airplanes</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question2">
                         <h5>2. ......... from England?</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a5" name="answer2" type="radio" value="300" class="form-group">
-                        <label for="a5">She is</label>
+                        <input name="answer2" type="radio" value="She is" class="form-group">
+                        <label for="">She is</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a6" name="answer2" type="radio" value="300" class="form-group">
-                        <label for="a6">You are</label>
+                        <input name="answer2" type="radio" value="You are" class="form-group">
+                        <label for="">You are</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a7" name="answer2" type="radio" value="300" class="form-group">
-                        <label for="a7">Are their</label>
+                        <input name="answer2" type="radio" value="Are their" class="form-group">
+                        <label for="">Are their</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a8" name="answer2" type="radio" value="300" class="form-group">
-                        <label for="a8">Are you</label>
+                        <input id="radio2" name="answer2" type="radio" value="Are you" class="form-group">
+                        <label for="">Are you</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <hr>
                     <div class="question3">
                         <h5>3. She is not ......... .</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a9" name="answer3" type="radio" value="300" class="form-group">
-                        <label for="a9">his friends</label>
+                        <input name="answer3" type="radio" value="his friends" class="form-group">
+                        <label for="">his friends</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a10" name="answer3" type="radio" value="300" class="form-group">
-                        <label for="a10">his girlfriend</label>
+                        <input id="radio3" name="answer3" type="radio" value="his girlfriend" class="form-group">
+                        <label for="">his girlfriend</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a11" name="answer3" type="radio" value="300" class="form-group">
-                        <label for="a11">our boyfriend</label>
+                        <input name="answer3" type="radio" value="our boyfriend" class="form-group">
+                        <label for="">our boyfriend</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a12" name="answer3" type="radio" value="300" class="form-group">
-                        <label for="a12">our friends</label>
+                        <input name="answer3" type="radio" value="our friends" class="form-group">
+                        <label for="">our friends</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question4">
                         <h5>4. We ......... very happy.</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a13" name="answer4" type="radio" value="300" class="form-group">
-                        <label for="a13">was</label>
+                        <input name="answer4" type="radio" value="was" class="form-group">
+                        <label for="">was</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a14" name="answer4" type="radio" value="300" class="form-group">
-                        <label for="a14">have got</label>
+                        <input name="answer4" type="radio" value="have got" class="form-group">
+                        <label for="">have got</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a15" name="answer4" type="radio" value="300" class="form-group">
-                        <label for="a15">are</label>
+                        <input id="radio4" name="answer4" type="radio" value="are" class="form-group">
+                        <label for="">are</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a16" name="answer4" type="radio" value="300" class="form-group">
-                        <label for="a16">have</label>
+                        <input name="answer4" type="radio" value="have" class="form-group">
+                        <label for="">have</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question5">
                         <h5>5. He ......... French.</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a17" name="answer5" type="radio" value="300" class="form-group">
-                        <label for="a17">am</label>
+                        <input name="answer5" type="radio" value="am" class="form-group">
+                        <label for="">am</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a18" name="answer5" type="radio" value="300" class="form-group">
-                        <label for="a18">are</label>
+                        <input name="answer5" type="radio" value="are" class="form-group">
+                        <label for="">are</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a19" name="answer5" type="radio" value="300" class="form-group">
-                        <label for="a19">isn't</label>
+                        <input id="radio5" name="answer5" type="radio" value="isn't" class="form-group">
+                        <label for="">isn't</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a20" name="answer5" type="radio" value="300" class="form-group">
-                        <label for="a20">aren't</label>
+                        <input name="answer5" type="radio" value="aren't" class="form-group">
+                        <label for="">aren't</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question6">
                         <h5>6. Your friends ......... very nice.</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a21" name="answer6" type="radio" value="300" class="form-group">
-                        <label for="a21">our</label>
+                        <input name="answer6" type="radio" value="our" class="form-group">
+                        <label for="">our</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a22" name="answer6" type="radio" value="300" class="form-group">
-                        <label for="a22">live</label>
+                        <input name="answer6" type="radio" value="live" class="form-group">
+                        <label for="">live</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a23" name="answer6" type="radio" value="300" class="form-group">
-                        <label for="a23">are</label>
+                        <input id="radio6" name="answer6" type="radio" value="are" class="form-group">
+                        <label for="">are</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a24" name="answer6" type="radio" value="300" class="form-group">
-                        <label for="a24">come from</label>
+                        <input name="answer6" type="radio" value="come from" class="form-group">
+                        <label for="">come from</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question7">
                         <h5>7. ......... two bananas on the table.</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a25" name="answer7" type="radio" value="300" class="form-group">
-                        <label for="a25">They are</label>
+                        <input name="answer7" type="radio" value="They are" class="form-group">
+                        <label for="">They are</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a26" name="answer7" type="radio" value="300" class="form-group">
-                        <label for="a26">There is</label>
+                        <input name="answer7" type="radio" value="There is" class="form-group">
+                        <label for="">There is</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a27" name="answer7" type="radio" value="300" class="form-group">
-                        <label for="a27">There are</label>
+                        <input id="radio7" name="answer7" type="radio" value="There are" class="form-group">
+                        <label for="">There are</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a28" name="answer7" type="radio" value="300" class="form-group">
-                        <label for="a28">There is</label>
+                        <input name="answer7" type="radio" value="There's" class="form-group">
+                        <label for="">There's</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question8">
                         <h5>8. I like eating ......... .</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a29" name="answer8" type="radio" value="300" class="form-group">
-                        <label for="a29">an apple</label>
+                        <input name="answer8" type="radio" value="an apple" class="form-group">
+                        <label for="">an apple</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a30" name="answer8" type="radio" value="300" class="form-group">
-                        <label for="a30">a apple</label>
+                        <input name="answer8" type="radio" value="a apple" class="form-group">
+                        <label for="">a apple</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a31" name="answer8" type="radio" value="300" class="form-group">
-                        <label for="a31">apples</label>
+                        <input id="radio8" name="answer8" type="radio" value="apples" class="form-group">
+                        <label for="">apples</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a32" name="answer8" type="radio" value="300" class="form-group">
-                        <label for="a32">apple</label>
+                        <input name="answer8" type="radio" value="apple" class="form-group">
+                        <label for="">apple</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question9">
                         <h5>9. ......... friends in Yorkshire?</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a33" name="answer9" type="radio" value="300" class="form-group">
-                        <label for="a33">Has she</label>
+                        <input name="answer9" type="radio" value="Has she" class="form-group">
+                        <label for="">Has she</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a34" name="answer9" type="radio" value="300" class="form-group">
-                        <label for="a34">Have they</label>
+                        <input name="answer9" type="radio" value="Have they" class="form-group">
+                        <label for="">Have they</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a35" name="answer9" type="radio" value="300" class="form-group">
-                        <label for="a35">Have they got</label>
+                        <input id="radio9" name="answer9" type="radio" value="Have they got" class="form-group">
+                        <label for="">Have they got</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a36" name="answer9" type="radio" value="300" class="form-group">
-                        <label for="a36">Have she got</label>
+                        <input name="answer9" type="radio" value="Have she got" class="form-group">
+                        <label for="">Have she got</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <hr>
                     <div class="question10">
                         <h5>10. ......... four rooms in our house.</h5>
                     </div>
                     <div class="form-group">
-                        <input id="a37" name="answer10" type="radio" value="300" class="form-group">
-                        <label for="a37">She have</label>
+                        <input name="answer10" type="radio" value="She have" class="form-group">
+                        <label for="">She have</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a38" name="answer10" type="radio" value="300" class="form-group">
-                        <label for="a38">They are</label>
+                        <input name="answer10" type="radio" value="They are" class="form-group">
+                        <label for="">They are</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a39" name="answer10" type="radio" value="300" class="form-group">
-                        <label for="a39">We haven't</label>
+                        <input name="answer10" type="radio" value="We haven't" class="form-group">
+                        <label for="">We haven't</label>
+                        <h1 class="fa fa-close"></h1>
                     </div>
                     <div class="form-group">
-                        <input id="a40" name="answer10" type="radio" value="300" class="form-group">
-                        <label for="a40">There are</label>
+                        <input id="radio10" name="answer10" type="radio" value="There are" class="form-group">
+                        <label for="">There are</label>
+                        <h1 class="fa fa-check"></h1>
                     </div>
                     <hr>
                 </fieldset>
                 
-                <div>
+                <div class="testButtons1">
                     <button type="button" class="btn btn-light" id="backBtn">
                         <a href="./index.html"><b>Vissza a főoldalra</b></a>
                     </button>
-                    <button type="submit" class="btn btn-light">
-                        <a href="./eredmeny-teszt1.html"><b>Küldés</b></a> 
+                    <button type="button" class="btn btn-light" id="sendBtn" onclick="checkTest1()">
+                        Küldés 
                     </button>
                 </div>
             </div>
+            <script>
+                $(document).ready(function () {
+                    $("#test1-input").on("keyup", function () {
+                        var value = $(this).val().toLowerCase();
+                        $("#test1 div").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                });
+            </script>
             <div class="col-sm-3">
-                <img class="index-img" src="./lib/images/test1.jpg" alt="card">
-            </div>
+                <img class="test1-img" src="./lib/images/test1.jpg" alt="img">            
+            </div> 
         </div>
     </div>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
