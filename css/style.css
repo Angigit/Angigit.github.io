@@ -70,37 +70,118 @@ h5 {
     height: auto;
 }
 
-.card {
+/* .card {
     width: 90%;
     height: auto;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    border-style: solid;
-    /* border-color: darkslategrey; */
-    border-color: maroon;
+    border: solid 15px brown;
+    border-radius: 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+.flip-card {
+    background-color: transparent;
+    width: 90%;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #f1f1f1;
+    color: black;
+    border: 1px solid #f1f1f1;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .flip-card-front p{
+      font-size: 30px;
+      font-weight: 500;
+      margin-top: 20px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #f1f1f1;
+    color: black;
+    border: 1px solid #f1f1f1;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-back p{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
 }
 
 #previousButton {
+    font-size: 20px;
     margin-top: 15px;
     margin-left: 5%;
     width: 42.5%;
     height: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#previousButton:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 #nextButton {
+    font-size: 20px;
     margin-top: 15px;
-    margin-left: 2%;
+    margin-left: 2.5%;
     width: 42.5%;
     height: auto;
     position: absolute;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.card-title {
+#nextButton:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+/* .card-title {
     margin-top: 10px;
 }
 
@@ -110,7 +191,7 @@ h5 {
 
 #theme {
     margin-top: 6%;
-}
+} */
 
 /*listak.html*/
 #cardsTable {
@@ -121,6 +202,12 @@ h5 {
     margin-top: 50px;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#listBtn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 #downloadBtn {
@@ -128,6 +215,12 @@ h5 {
     font-weight: bold;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#downloadBtn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 .list-group {
@@ -188,7 +281,19 @@ h5 {
 }
 
 #sendBtn {
+    font-size: 20px;
     font-weight: bold;
+    margin-top: 15px;
+    margin-left: 5%;
+    width: 42.5%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#sendBtn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
 }
 
 .fa.fa-check {

@@ -29,6 +29,7 @@ let cardsubTitle = document.querySelector("#subtitle1");
 let cardTitle2 = document.querySelector("#cardTitle2");
 let cardsubTitle2 = document.querySelector("#subtitle2");
 let theme = document.querySelector("#theme");
+let theme2 = document.querySelector("#theme2");
 
 function previousCardBody(data, cardID) {
     let card = document.querySelector(`#${cardID}`);
@@ -96,7 +97,7 @@ function nextCardBody(data, cardID) {
         cardsubTitle.innerHTML = data[index][keys[2]];
         cardTitle2.innerHTML = data[index][keys[3]];
         cardsubTitle2.innerHTML = data[index][keys[4]];
-        
+
         //Change fontcolor
         switch (data[index][keys[5]]) {
             case "Bemutatkozás": theme.innerHTML = data[index][keys[5]].fontcolor("maroon");
