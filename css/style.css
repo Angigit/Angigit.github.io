@@ -5,7 +5,11 @@
 }
 
 body {
-    background-color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(253, 241, 241), 
+        rgb(175, 160, 160)
+    );
 }
 
 .title1 {
