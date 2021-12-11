@@ -764,4 +764,7 @@ function checkTest3() {
     }
 }
 
+// Footer
+
+document.querySelector('.date').innerHTML = formatDate(today, 'mm/dd/yy');
 
