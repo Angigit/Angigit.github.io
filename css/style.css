@@ -331,3 +331,37 @@ h5 {
     border-bottom-style: solid;
     border-bottom-color: darkslategrey;
 }
+
+/* footer */
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 9%;
+   color: rgba(255,255,255,.5);;
+   font-size: 1.1rem;
+}
+
+.icons {
+    display: inline-block;
+    margin-left: 2rem;
+    
+}
+
+.icons a {
+    color: rgba(255,255,255,.5);
+    padding: 0 2px;
+}
+
+.footer p {
+    display: inline-block;
+    padding-left: 0;
+    margin-top: 0.8rem;
+    margin-left: 30rem;
+}
+
+.date {
+    float: right;
+    padding-right: 2rem;
+}
