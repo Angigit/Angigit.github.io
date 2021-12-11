@@ -74,6 +74,7 @@ h5 {
     margin-right: auto;
     width: 90%;
     height: auto;
+    border-radius: 2rem;
 }
 
 .flip-card {
