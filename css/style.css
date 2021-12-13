@@ -160,47 +160,25 @@ h5 {
     background-color: rgba(0, 0, 0, 0.32);
 }
 
-/*listak.html*/
-#cardsTable {
-    margin-top: 40px;
-}
-
-#listBtn {
-    margin-top: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
-}
-
-#listBtn:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.32);
-}
-
-#downloadBtn {
-    margin-top: 15px;
-    font-weight: bold;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
-}
-
-#downloadBtn:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.32);
-}
-
-.list-group {
-    margin-top: 40px;
-}
-
 /*nyelvek.html*/
-#lang-list {
-    margin-top: 50px;
+.lang-list {
+    
+    margin: 50px 80px;
     text-align: center;
-    margin-left: 80px;
-    margin-right: 80px;
+    border: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
 
+.lang-list li {
+    background: linear-gradient(
+        to right,
+        rgb(253, 241, 241), 
+        rgb(175, 160, 160)
+    );
+    border: none;
 }
 
 .lang-img1, .lang-img3, .lang-img5 {
@@ -234,6 +212,40 @@ h5 {
     margin-left: 1%;
     margin-right: auto;
     width: 24%;
+}
+
+/*listak.html*/
+#cardsTable {
+    margin-top: 40px;
+}
+
+#listBtn {
+    margin-top: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#listBtn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+#downloadBtn {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#downloadBtn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+.list-group {
+    margin-top: 40px;
 }
 
 /*teszt1-teszt2-teszt3.html*/
