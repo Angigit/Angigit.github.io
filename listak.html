@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 </head>
 
-<body>
+<body onload="getCards()">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -71,12 +71,8 @@
                     <h6>A listát pedig le is lehet tölteni pdf formátumban, amennyiben szükség van rá.</h6>
                 </div>                             
             </div>
-            <div class="col-sm-4"></div>
-            <div class="col-sm-2">
-                <div class="">
-                    <button id="listBtn" class="btn btn-block btn-light" type="button" onclick="getCards()">
-                        Kártya lista
-                    </button>
+            <div class="col-sm-6">
+                <div>
                     <button id="downloadBtn" class="btn btn-block btn-light fa fa-download" type="button" onclick="getDataToPDF()">
                         PDF letöltés
                     </button>
@@ -100,6 +96,16 @@
                 <tbody></tbody>
             </table>
         </div>
+    </div>
+    <div class="footer bg-dark">        
+        <div class="icons">
+            <a href="#" onclick='window.open("https://www.facebook.com");return false;' class="fa fa-facebook"></a>
+            <a href="#" onclick='window.open("https://www.skype.com");return false;' class="fa fa-skype"></a>
+            <a href="#" onclick='window.open("https://www.whatsapp.com");return false;' class="fa fa-whatsapp"></a>
+            <a href="#" onclick='window.open("https://www.google.com");return false;' class="fa fa-google"></a>
+        </div>   
+        <p>Nyelvtanuló kártyák</p>    
+        <p class="date"></p>
     </div>
     <script src="./JS/main.js"></script>
 </body>

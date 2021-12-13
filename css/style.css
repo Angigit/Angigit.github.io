@@ -42,7 +42,7 @@ body {
     margin: 50px auto;
     width: 80%;
     height: auto;
-    border-radius: 2rem;
+    border-radius: 1rem;
     opacity: 0.9;
 }
 
@@ -56,8 +56,8 @@ body {
     perspective: 1000px;
     /* Remove this if you don't want the 3D effect */
     backdrop-filter: blur(3rem);
-    border-radius: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.190);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* This container is needed to position the front and back side */
@@ -84,9 +84,8 @@ body {
     -webkit-backface-visibility: hidden;
     /* Safari */
     backface-visibility: hidden;
-    background-color: #f1f1f1;
-    color: black;
-    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 1rem;
 }
 
 .flip-card-front p, .flip-card-back p {
@@ -226,6 +225,7 @@ body {
 .add-btn {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     margin-bottom: 2rem;
+    border-radius: 1rem;
     transition: 0.3s;
 }
 
@@ -239,26 +239,33 @@ body {
 }
 
 /*listak.html*/
-#cardsTable {
-    margin-top: 40px;
+.table {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
-#listBtn {
-    margin-top: 50px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
+.table thead tr th {
+    /* border: 2px solid rgba(0, 0, 0, 0.3); */
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-#listBtn:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.32);
+.table tbody tr td {
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    border: none;
 }
 
 #downloadBtn {
-    margin-top: 15px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    width: 30%;
+    margin: 4rem 12rem;
     font-weight: bold;
     padding: 10px;
+    border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
 }
@@ -268,9 +275,7 @@ body {
     background-color: rgba(0, 0, 0, 0.32);
 }
 
-.list-group {
-    margin-top: 40px;
-}
+
 
 /*teszt1-teszt2-teszt3.html*/
 .test {
