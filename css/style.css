@@ -30,16 +30,7 @@ body {
     border-bottom-color: darkslategrey;
 }
 
-/*eredmeny-teszt1.html*/
-h5 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
-.testButtons1 {
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
 
 /*hozzaadas.html*/
 .fieldset {
@@ -162,7 +153,6 @@ h5 {
 
 /*nyelvek.html*/
 .lang-list {
-    
     margin: 50px 80px;
     text-align: center;
     border: rgba(255, 255, 255, 0.7);
@@ -198,13 +188,22 @@ h5 {
 }
 
 /*temakorok.html*/
-.list-group-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.theme-listgroup {
+    margin: 2rem 0;
+    border: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.theme-list {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border: none; 
+    padding: 1rem;
 }
 
 .clearfix {
     overflow: auto;
+    text-align: justify;
 }
 
 .theme-img {
@@ -258,6 +257,11 @@ h5 {
     border-bottom-style: solid;
     border-bottom-color: darkslategrey;
 }
+
+/* .testButtons1 {
+    margin-left: 20px;
+    margin-bottom: 30px;
+} */
 
 #sendBtn {
     font-size: 20px;
