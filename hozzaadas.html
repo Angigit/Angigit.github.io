@@ -57,8 +57,9 @@
             </form>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
+    <div class="container add-container">
+        <img class="add-img" src="./lib/images/pexels-photo-442574.jpeg" alt="card">
+        <div class="row add-row">
             <div class="col-sm-3">
                 <div class="title1">
                     <h6>Ezen az oldalon új szavakat, vagy kifejezéseket lehet felvenni, amelyek majd megjelennek a
@@ -70,19 +71,17 @@
             </div>
             <div class="col-sm-6">
                 <hr>
-                <fieldset>
-                    <legend>
-                        <h3>Kártya adatok</h3>
-                    </legend>
-                </fieldset>
-                <form id="cardForm" action="" class="form-horizontal">
+                <form action="" class="form-horizontal card-form">
+                    <fieldset>
+                        <legend>Kártya adatok</legend>
+                    </fieldset>
                     <div class="form-group">
                         <label for="">Megnevezés:</label>
                         <input id="name1" name="Megnevezés1" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Nyelv:</label>
-                        <select id="selectNyelv1" name="Nyelv1" multiple class="form-control">
+                        <select id="selectNyelv1" name="Nyelv1" class="form-control">
                             <option value="Angol">Angol</option>
                             <option value="Német">Német</option>
                             <option value="Francia">Francia</option>
@@ -99,7 +98,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Nyelv:</label>
-                        <select id="selectNyelv2" name="Nyelv2" multiple class="form-control">
+                        <select id="selectNyelv2" name="Nyelv2" class="form-control">
                             <option value="Angol">Angol</option>
                             <option value="Német">Német</option>
                             <option value="Francia">Francia</option>
@@ -112,7 +111,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Témakör:</label>
-                        <select id="selectTema" name="Témakör" multiple class="form-control">
+                        <select id="selectTema" name="Témakör" class="form-control">
                             <option value="Bemutatkozás">Bemutatkozás</option>
                             <option value="Otthon">Otthon</option>
                             <option value="Munkahely">Munkahely</option>
@@ -127,10 +126,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-light" id="backBtn">
+                        <button type="button" class="btn btn-light add-btn">
                             <a href="./index.html"><b>Vissza a főoldalra</b></a>
                         </button>
-                        <button type="button" class="btn btn-light" id="mentesBtn" onclick="createCard()">
+                        <button type="button" class="btn btn-light add-btn" onclick="createCard()">
                             <b>Mentés</b>
                         </button>
                     </div>
@@ -138,9 +137,19 @@
                 <hr>
             </div>
             <div class="col-sm-3">
-                <img class="add-img" src="./lib/images/card2.jpg" alt="card">
+                <!-- <img class="add-img" src="./lib/images/pexels-photo-442574.jpeg" alt="card"> -->
             </div>
         </div>
+    </div>
+    <div class="footer bg-dark">        
+        <div class="icons">
+            <a href="#" onclick='window.open("https://www.facebook.com");return false;' class="fa fa-facebook"></a>
+            <a href="#" onclick='window.open("https://www.skype.com");return false;' class="fa fa-skype"></a>
+            <a href="#" onclick='window.open("https://www.whatsapp.com");return false;' class="fa fa-whatsapp"></a>
+            <a href="#" onclick='window.open("https://www.google.com");return false;' class="fa fa-google"></a>
+        </div>   
+        <p>Nyelvtanuló kártyák</p>    
+        <p class="date"></p>
     </div>
     <script src="./JS/main.js"></script>
 </body>
