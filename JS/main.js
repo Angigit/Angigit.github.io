@@ -750,7 +750,7 @@ function checkTest3() {
             checks3[9].style.display = "inline";
         } else if (radioChecked3[k].value == "Has she already finish") {
             closes3[27].style.display = "inline";
-        } else if (radioChecked3[k].value == "Haven’t she still finished") {
+        } else if (radioChecked3[k].value == "Haven't she still finished") {
             closes3[28].style.display = "inline";
         } else if (radioChecked3[k].value == "She has finished still") {
             closes2[29].style.display = "inline";
