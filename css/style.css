@@ -205,7 +205,6 @@ body {
     margin: 1.6rem 1.6rem;
     padding-right: 4rem;
     font-weight: 500;
-    /* filter: brightness(50%); */
 }
 
 .card-form input, .card-form select {
