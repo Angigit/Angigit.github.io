@@ -13,17 +13,12 @@ body {
 }
 
 .title1 {
-    margin-top: 3rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3rem 0 1.5rem 0;
     text-align: justify;
     word-spacing: 3px;
 }
 
 .title2 {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: justify;
     word-spacing: 3px;
     border-bottom-style: solid;
@@ -32,14 +27,12 @@ body {
 
 /*index.html*/
 .index-title {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3rem 0;
     text-align: center;
 }
 
 .index-img {
-    margin: 50px auto;
+    margin: 3rem auto;
     width: 80%;
     height: auto;
     border-radius: 1rem;
@@ -134,7 +127,6 @@ body {
 .lang-list {
     margin: 50px 80px;
     text-align: center;
-    border: rgba(255, 255, 255, 0.7);
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 1.3rem;
@@ -169,7 +161,6 @@ body {
 /*temakorok.html*/
 .theme-listgroup {
     margin: 3rem 0;
-    border: rgba(255, 255, 255, 0.7);
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -240,22 +231,22 @@ body {
 
 /*listak.html*/
 .table {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem 0;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    border: rgba(255, 255, 255, 0.7);
     border-radius: 1rem;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table thead {  
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .table thead tr th {
-    /* border: 2px solid rgba(0, 0, 0, 0.3); */
-    border: none;
+    border-top: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .table tbody tr td {
-    /* border: 1px solid rgba(0, 0, 0, 0.3); */
     border: none;
 }
 
@@ -356,9 +347,8 @@ body {
 
 /*torles.html*/
 .del-title {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3rem 0.5rem 0.5rem;
+    padding-bottom: 1rem;
     text-align: justify;
     word-spacing: 3px;
     border-bottom-style: solid;

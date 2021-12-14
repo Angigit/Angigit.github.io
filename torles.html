@@ -60,27 +60,35 @@
 
     <div class="container">
         <div class="row">
-            <div class="del-title">
-                <h6>Ezen az oldalon lehet törölni egy kártyát. A sor végén található törlés gombra kattintva a rendszer megkérdezi, hogy tényleg akarjuk-e törölni a kártyát? Amennyiben igen, a kártya véglegesen törlésre kerül. Természetesen lehetőség van bármikor újra hozzáadni egy kártyát a többihez.</h6>
+            <div class="col-sm-12">
+                <h6 class="del-title">Amennyiben szükséges, ezen az oldalon lehet törölni egy kártyát. A törlés gombra kattintva a kártya véglegesen törlésre kerül. Természetesen lehetőség van bármikor hozzáadni egy új kártyát a többihez.</h6>
+            </div>
+            <div class="col-sm-12 table-responsive">
+                <table id="cardsTable" class="table">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;">#</th>
+                            <th style="width: 250px;">Megnevezés</th>
+                            <th style="width: 250px;">Nyelv</th>
+                            <th style="width: 250px;">Megnevezés</th>
+                            <th style="width: 250px;">Nyelv</th>
+                            <th style="width: 250px;">Témakör</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="table-responsive">
-            <table id="cardsTable" class="table">
-                <thead>
-                    <tr>
-                        <th style="width: 80px;">#</th>
-                        <th style="width: 250px;">Megnevezés</th>
-                        <th style="width: 250px;">Nyelv</th>
-                        <th style="width: 250px;">Megnevezés</th>
-                        <th style="width: 250px;">Nyelv</th>
-                        <th style="width: 250px;">Témakör</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <div class="footer bg-dark">        
+        <div class="icons">
+            <a href="#" onclick='window.open("https://www.facebook.com");return false;' class="fa fa-facebook"></a>
+            <a href="#" onclick='window.open("https://www.skype.com");return false;' class="fa fa-skype"></a>
+            <a href="#" onclick='window.open("https://www.whatsapp.com");return false;' class="fa fa-whatsapp"></a>
+            <a href="#" onclick='window.open("https://www.google.com");return false;' class="fa fa-google"></a>
+        </div>   
+        <p>Nyelvtanuló kártyák</p>    
+        <p class="date"></p>
     </div>
     <script src="./JS/main.js"></script>
 </body>

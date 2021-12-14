@@ -332,8 +332,9 @@ function fillDataTable2(data, tableID) {
 //Create delete button
 function createBtnGroup() {
     let group = createAnyElement("div", { class: "btn btn-group" });
-    let delBtn = createAnyElement("button", { class: "btn btn-danger", onclick: "delCard(this)" });
-    delBtn.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
+    let delBtn = createAnyElement("button", { class: "btn btn-outline-danger btn-sm", onclick: "delCard(this)" });
+    // delBtn.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
+    delBtn.innerHTML = 'Törlés';
 
     group.appendChild(delBtn);
 
@@ -371,13 +372,6 @@ function delCard(btn) {
 
 //Checking test results
 function checkTest1() {
-    /* for (let j = 0; j < checks.length; j++) {
-        checks[j].innerHTML = " Helyes válasz!";
-        checks[j].style.display = "inline";
-    }
-    for (let l = 0; l < closes.length; l++) {
-        closes[l].style.display = "inline";
-    } */
     let checks = document.querySelectorAll("#test1 h1.fa.fa-check");
     let closes = document.querySelectorAll("#test1 h1.fa.fa-close");
     let radioChecked = document.querySelectorAll('#test1 input[type="radio"]:checked');
