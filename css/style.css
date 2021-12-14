@@ -266,35 +266,50 @@ body {
     background-color: rgba(0, 0, 0, 0.32);
 }
 
-
-
 /*teszt1-teszt2-teszt3.html*/
-.test {
-    margin: 2.9rem 2rem;
+.test-title1 {
+    margin: 3rem 0 1.5rem 0;
+    text-align: start;
+    word-spacing: 3px;
 }
 
-.test-legend {
-    border-bottom-style: solid;
-    border-bottom-color: darkslategrey;
-}
-
-/* .testButtons1 {
-    margin-left: 20px;
-    margin-bottom: 30px;
-} */
-
-#sendBtn {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-left: 5%;
-    width: 42.5%;
-    height: auto;
+.nav1, .nav2, .nav3 {
+    margin: 3rem 0.2rem 3.7rem;
+    color: darkslategrey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
     transition: 0.3s;
 }
 
-#sendBtn:hover {
+.nav1:hover, .nav2:hover, .nav3:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+.test {
+    text-align: center;
+    font-weight: 500;  
+}
+
+/* .test-1 {
+    padding: 0 8rem;
+    border-bottom-style: solid;
+    border-bottom-color: darkslategrey;
+} */
+
+.test-btn {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    margin: 0 0 4rem 0;
+    font-weight: 500;
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.test-btn a {
+    color: black;
+}
+
+.test-btn:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.32);
 }
@@ -313,12 +328,12 @@ body {
     color: red;
 }
 
-.test1-img {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: auto;
+.test-img {
+    margin: 3rem auto;
+    width: 17rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
 .test2-img {
@@ -335,14 +350,6 @@ body {
     margin-right: auto;
     width: 100%;
     height: auto;
-}
-
-#test-nav {
-    margin-top: 40px;
-}
-
-#nav1, #nav2, #nav3 {
-    color: darkslategrey;
 }
 
 /*torles.html*/
