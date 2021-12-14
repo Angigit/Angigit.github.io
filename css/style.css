@@ -287,15 +287,20 @@ body {
 }
 
 .test {
-    text-align: center;
     font-weight: 500;  
 }
 
-/* .test-1 {
-    padding: 0 8rem;
-    border-bottom-style: solid;
-    border-bottom-color: darkslategrey;
-} */
+.test h5 {
+    margin: 2rem 0;
+}
+
+.test input {
+    margin: 0 0.5rem;
+} 
+
+.test legend {
+    text-align: center;
+}
 
 .test-btn {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
