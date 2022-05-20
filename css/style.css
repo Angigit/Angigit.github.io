@@ -184,23 +184,6 @@ body {
 }
 
 /* hozzaadas.html  */
-.add-container {
-    margin: 0;
-    padding: 0;
-}
-
-.add-img {
-    filter: brightness(90%);
-    width: 118%;
-    height: 600px;
-}
-
-.add-row {
-    position: absolute;
-    top: 12%;
-    left: 10%;
-}
-
 .card-form {   
     margin: 1.6rem 1.6rem;
     padding-right: 4rem;
